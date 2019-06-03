@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'MainController@index');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index');
+Route::get('/home', 'MainController@index');
 Route::get('/wowfree', 'HomeController@game')->name('wow');
 Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');

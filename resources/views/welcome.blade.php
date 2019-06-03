@@ -49,10 +49,10 @@
                     @guest
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('login') }}">Войти</a>
+                                <a class="nav-link" data-toggle="modal" data-target="#loginModal">Войти</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link btn-border-wrap" href="{{ route('register') }}"><span>Зарегистрироваться</span></a>
+                                <a class="nav-link btn-border-wrap" data-toggle="modal" data-target="#registerModal"><span>Зарегистрироваться</span></a>
                             </li>
                         </ul>
                     @else
@@ -138,10 +138,151 @@
 
             <p>123</p>
 
-            @foreach($games as $game)
-                {{ print_r($game) }}
-            @endforeach
+            {{--@foreach($games as $game)--}}
+                {{--{{ print_r($game) }}--}}
+            {{--@endforeach--}}
 
+
+        <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2>Войти</h2>
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Пароль" name="password">
+                                    <a href="#">Забыли пароль?</a>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="remember">
+                                            Запомнить меня
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit">Войти</button>
+                                </div>
+                                <a href="#">У вас нет аккаунта?</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .modal-content {
+                    border-radius: 20px;
+                    background: #ffffff;
+                    padding: 25px 50px;
+                }
+
+                .modal-content > .modal-body > h2 {
+                    text-align: center;
+                    color: #333333;
+                    font-size: 48px;
+                    font-weight: 400;
+                    line-height: 64px;
+                }
+
+                .modal-content > .modal-body > form [type='email'], [type='password'], [type='text'] {
+                    height: 60px;
+                    border-radius: 30px;
+                    padding: 0px 30px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background-color: #f2f3f6;
+                }
+
+                .modal-content > .modal-body > form button {
+                    display: block;
+                    border: none;
+                    text-align: center;
+                    margin: 0 auto;
+                    font-size: 18px;
+                    text-decoration: none;
+                    padding: 10px 30px;
+                    background: -webkit-linear-gradient(315deg, #0A83FF, #02EFFD);
+                    background: -o-linear-gradient(315deg, #0A83FF, #02EFFD);
+                    background: linear-gradient(135deg, #0A83FF, #02EFFD);
+                    border-radius: 30px;
+                    color: #ffffff;
+                }
+
+                .modal-body > form > .form-group {
+                    position: relative;
+                }
+
+                .modal-body > form > .form-group > a{
+                    position: absolute;
+                    top: 20px;
+                    right: 30px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #0994ff;
+                }
+
+                .modal-body > form > a {
+                    text-align: center;
+                    display: block;
+                    color: #0994ff;
+                }
+
+            </style>
+
+            <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h2>Регистрация</h2>
+                            <form method="POST" action="{{ route('register') }}">
+                                @csrf
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Никнейм" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Пароль" name="password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Повтор пароля" name="password_confirmation">
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" name="remember">
+                                            Согласен с политикой конфиденциальности
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit">Создать аккаунт</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="row games-card">
                 <div class="col-md-4">
