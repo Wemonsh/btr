@@ -46,6 +46,7 @@
                         </li>
                     </ul>
                     <div class=" my-2 my-lg-0">
+                    @guest
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{ route('login') }}">Войти</a>
@@ -54,6 +55,27 @@
                                 <a class="nav-link btn-border-wrap" href="{{ route('register') }}"><span>Зарегистрироваться</span></a>
                             </li>
                         </ul>
+                    @else
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    @endguest
                     </div>
                 </div>
             </nav>
@@ -106,6 +128,19 @@
                     </form>
                 </div>
             </div>
+
+            <style>
+                .carousel-item > img {
+                    object-fit: cover;
+                }
+            </style>
+
+
+            <p>123</p>
+
+            @foreach($games as $game)
+                {{ print_r($game) }}
+            @endforeach
 
 
             <div class="row games-card">

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Game;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,28 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $games = Game::with('gamingServices')->get()->toArray();
+
+
+
+        $user = Auth::user();
+        $vars = [
+          'user' => $user,
+          'games' => $games
+        ];
+
+        dump($games);
+
+
+        return view('welcome', $vars);
+    }
+
+    public function game() {
+        return view('games.wowfree');
+    }
+
+    public function gamew() {
+        return view('games.wowrueng');
     }
 }

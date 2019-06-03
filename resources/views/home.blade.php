@@ -1,21 +1,40 @@
-@extends('layouts.app')
+@extends('layouts.additional')
+
+@section('header')
+    <h1 class="headline">{{ $user->name }}</h1>
+    <ul class="head-buttons">
+        <li class="button-item active-item"><a href="#">Аккаунты</a></li>
+        <li class="button-item"><a href="#">Предметы</a></li>
+        <li class="button-item"><a href="#">Заказы</a></li>
+    </ul>
+@endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Последние заказы</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+            <div class="card-body">
+                You are logged in!
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">Мои кошельки</div>
 
-                    You are logged in!
-                </div>
+            <div class="card-body">
+                You are logged in!
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">Управление профилем</div>
+
+            <div class="card-body">
+                You are logged in!
             </div>
         </div>
     </div>
