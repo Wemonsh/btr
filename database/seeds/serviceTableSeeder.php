@@ -17,28 +17,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Кинары',
             'alias' => 'kinars',
             'description' => '',
-            'id_game' => 1,
+            'game_id' => 1,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 1,
+            'game_id' => 1,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 1,
+            'game_id' => 1,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 1,
+            'game_id' => 1,
         ]);
 
         // Albion Online
@@ -46,35 +46,35 @@ class serviceTableSeeder extends Seeder
             'name' => 'Серебро',
             'alias' => 'silver',
             'description' => '',
-            'id_game' => 2,
+            'game_id' => 2,
         ]);
 
         Service::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 2,
+            'game_id' => 2,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 2,
+            'game_id' => 2,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 2,
+            'game_id' => 2,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 2,
+            'game_id' => 2,
         ]);
 
         // Archeage RU
@@ -82,28 +82,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 3,
+            'game_id' => 3,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 3,
+            'game_id' => 3,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 3,
+            'game_id' => 3,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 3,
+            'game_id' => 3,
         ]);
 
         // Black Desert RU
@@ -111,28 +111,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Серебро',
             'alias' => 'silver',
             'description' => '',
-            'id_game' => 4,
+            'game_id' => 4,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 4,
+            'game_id' => 4,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 4,
+            'game_id' => 4,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 4,
+            'game_id' => 4,
         ]);
 
         // Blade & Soul RU
@@ -140,28 +140,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 5,
+            'game_id' => 5,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 5,
+            'game_id' => 5,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 5,
+            'game_id' => 5,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 5,
+            'game_id' => 5,
         ]);
 
         // Clash of Clans
@@ -169,21 +169,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 6,
+            'game_id' => 6,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 6,
+            'game_id' => 6,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 6,
+            'game_id' => 6,
         ]);
 
         // Crossout
@@ -191,28 +191,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 7,
+            'game_id' => 7,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 7,
+            'game_id' => 7,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 7,
+            'game_id' => 7,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 7,
+            'game_id' => 7,
         ]);
 
         // CS GO
@@ -220,21 +220,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 8,
+            'game_id' => 8,
         ]);
 
         Service::create([
             'name' => 'Скины',
             'alias' => 'skins',
             'description' => '',
-            'id_game' => 8,
+            'game_id' => 8,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 8,
+            'game_id' => 8,
         ]);
 
         // Destiny 2
@@ -242,14 +242,14 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 9,
+            'game_id' => 9,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 9,
+            'game_id' => 9,
         ]);
 
         // Diablo 3
@@ -257,14 +257,14 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 10,
+            'game_id' => 10,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 10,
+            'game_id' => 10,
         ]);
 
         // Dota 2
@@ -272,21 +272,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 11,
+            'game_id' => 11,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 11,
+            'game_id' => 11,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 11,
+            'game_id' => 11,
         ]);
 
         // Elder Scrolls Online
@@ -294,28 +294,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 12,
+            'game_id' => 12,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 12,
+            'game_id' => 12,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 12,
+            'game_id' => 12,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 12,
+            'game_id' => 12,
         ]);
 
         // Escape from Tarkov
@@ -323,49 +323,49 @@ class serviceTableSeeder extends Seeder
             'name' => 'Рубли',
             'alias' => 'rubles',
             'description' => '',
-            'id_game' => 13,
+            'game_id' => 13,
         ]);
 
         Service::create([
             'name' => 'Доллары',
             'alias' => 'dollars',
             'description' => '',
-            'id_game' => 13,
+            'game_id' => 13,
         ]);
 
         Service::create([
             'name' => 'Евро',
             'alias' => 'euro',
             'description' => '',
-            'id_game' => 13,
+            'game_id' => 13,
         ]);
 
         Service::create([
             'name' => 'Биткойны',
             'alias' => 'bitcoins',
             'description' => '',
-            'id_game' => 13,
+            'game_id' => 13,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 13,
+            'game_id' => 13,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 13,
+            'game_id' => 13,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 13,
+            'game_id' => 13,
         ]);
 
         // EVE Online
@@ -373,28 +373,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'ISK',
             'alias' => 'isk',
             'description' => '',
-            'id_game' => 14,
+            'game_id' => 14,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 14,
+            'game_id' => 14,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 14,
+            'game_id' => 14,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 14,
+            'game_id' => 14,
         ]);
 
         // Fifa
@@ -402,21 +402,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Монеты',
             'alias' => 'coins',
             'description' => '',
-            'id_game' => 15,
+            'game_id' => 15,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 15,
+            'game_id' => 15,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 15,
+            'game_id' => 15,
         ]);
 
         // GTA 5
@@ -424,14 +424,14 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 16,
+            'game_id' => 16,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 16,
+            'game_id' => 16,
         ]);
 
         // GTA SAMP, CRMP, RP
@@ -439,28 +439,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Вирты',
             'alias' => 'virts',
             'description' => '',
-            'id_game' => 17,
+            'game_id' => 17,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 17,
+            'game_id' => 17,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 17,
+            'game_id' => 17,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 17,
+            'game_id' => 17,
         ]);
 
         // Guild Wars 2
@@ -468,28 +468,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 18,
+            'game_id' => 18,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 18,
+            'game_id' => 18,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 18,
+            'game_id' => 18,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 18,
+            'game_id' => 18,
         ]);
 
         // Gwent
@@ -497,14 +497,14 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 19,
+            'game_id' => 19,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 19,
+            'game_id' => 19,
         ]);
 
         // Hearthstone
@@ -512,14 +512,14 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 20,
+            'game_id' => 20,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 20,
+            'game_id' => 20,
         ]);
 
         // League of Legends
@@ -527,21 +527,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Riot Points',
             'alias' => 'riot-points',
             'description' => '',
-            'id_game' => 21,
+            'game_id' => 21,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 21,
+            'game_id' => 21,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 21,
+            'game_id' => 21,
         ]);
 
         // Lineage 2 EU/NA
@@ -549,7 +549,7 @@ class serviceTableSeeder extends Seeder
             'name' => 'Адена',
             'alias' => 'adena',
             'description' => '',
-            'id_game' => 22,
+            'game_id' => 22,
         ]);
 
 
@@ -557,21 +557,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 22,
+            'game_id' => 22,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 22,
+            'game_id' => 22,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 22,
+            'game_id' => 22,
         ]);
 
         // Lineage 2 RU
@@ -579,28 +579,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Адена',
             'alias' => 'adena',
             'description' => '',
-            'id_game' => 23,
+            'game_id' => 23,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 23,
+            'game_id' => 23,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 23,
+            'game_id' => 23,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 23,
+            'game_id' => 23,
         ]);
 
         // Lineage 2 Free
@@ -608,35 +608,35 @@ class serviceTableSeeder extends Seeder
             'name' => 'Адена',
             'alias' => 'adena',
             'description' => '',
-            'id_game' => 24,
+            'game_id' => 24,
         ]);
 
         Service::create([
             'name' => 'Монеты',
             'alias' => 'coins',
             'description' => '',
-            'id_game' => 24,
+            'game_id' => 24,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 24,
+            'game_id' => 24,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 24,
+            'game_id' => 24,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 24,
+            'game_id' => 24,
         ]);
 
         // Neverwinter online
@@ -644,28 +644,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Бриллианты',
             'alias' => 'diamonds',
             'description' => '',
-            'id_game' => 25,
+            'game_id' => 25,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 25,
+            'game_id' => 25,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 25,
+            'game_id' => 25,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 25,
+            'game_id' => 25,
         ]);
 
         // Overwatch
@@ -673,21 +673,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 26,
+            'game_id' => 26,
         ]);
 
         Service::create([
             'name' => 'Скины',
             'alias' => 'skins',
             'description' => '',
-            'id_game' => 26,
+            'game_id' => 26,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 26,
+            'game_id' => 26,
         ]);
 
         // Path of Exile
@@ -695,49 +695,49 @@ class serviceTableSeeder extends Seeder
             'name' => 'Сферы возвышения',
             'alias' => 'spheres-of-elevation',
             'description' => '',
-            'id_game' => 27,
+            'game_id' => 27,
         ]);
 
         Service::create([
             'name' => 'Сферы хаоса',
             'alias' => 'spheres-of-chaos',
             'description' => '',
-            'id_game' => 27,
+            'game_id' => 27,
         ]);
 
         Service::create([
             'name' => 'Сферы прочие',
             'alias' => 'other-spheres',
             'description' => '',
-            'id_game' => 27,
+            'game_id' => 27,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 27,
+            'game_id' => 27,
         ]);
 
         Service::create([
             'name' => 'Билды',
             'alias' => 'builds',
             'description' => '',
-            'id_game' => 27,
+            'game_id' => 27,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 27,
+            'game_id' => 27,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 27,
+            'game_id' => 27,
         ]);
 
         // Perfect World (RU)
@@ -745,28 +745,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Юани',
             'alias' => 'yuan',
             'description' => '',
-            'id_game' => 28,
+            'game_id' => 28,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 28,
+            'game_id' => 28,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 28,
+            'game_id' => 28,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 28,
+            'game_id' => 28,
         ]);
 
         // PUBG
@@ -774,21 +774,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 29,
+            'game_id' => 29,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 29,
+            'game_id' => 29,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 29,
+            'game_id' => 29,
         ]);
 
         // Revelation Online
@@ -796,28 +796,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 30,
+            'game_id' => 30,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 30,
+            'game_id' => 30,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 30,
+            'game_id' => 30,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 30,
+            'game_id' => 30,
         ]);
 
         // Tom Clancy's Rainbow 6
@@ -825,21 +825,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 31,
+            'game_id' => 31,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 31,
+            'game_id' => 31,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 31,
+            'game_id' => 31,
         ]);
 
         // War Thunder
@@ -847,21 +847,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'GAIJIN COINS',
             'alias' => 'gaijin-coins',
             'description' => '',
-            'id_game' => 32,
+            'game_id' => 32,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 32,
+            'game_id' => 32,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 32,
+            'game_id' => 32,
         ]);
 
         // Warface
@@ -869,21 +869,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 33,
+            'game_id' => 33,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 33,
+            'game_id' => 33,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 33,
+            'game_id' => 33,
         ]);
 
         // Warframe
@@ -891,28 +891,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Платина',
             'alias' => 'platinum',
             'description' => '',
-            'id_game' => 34,
+            'game_id' => 34,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 34,
+            'game_id' => 34,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 34,
+            'game_id' => 34,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 34,
+            'game_id' => 34,
         ]);
 
         // World of Tanks
@@ -920,21 +920,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 35,
+            'game_id' => 35,
         ]);
 
         Service::create([
             'name' => 'Бонус коды',
             'alias' => 'bonus-codes',
             'description' => '',
-            'id_game' => 35,
+            'game_id' => 35,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 35,
+            'game_id' => 35,
         ]);
 
         // World of Warships
@@ -942,14 +942,14 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 36,
+            'game_id' => 36,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 36,
+            'game_id' => 36,
         ]);
 
         // WOW FREE
@@ -957,28 +957,28 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 37,
+            'game_id' => 37,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 37,
+            'game_id' => 37,
         ]);
 
         Service::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
-            'id_game' => 37,
+            'game_id' => 37,
         ]);
 
         Service::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
-            'id_game' => 37,
+            'game_id' => 37,
         ]);
 
         // WOW RU/EU
@@ -986,63 +986,63 @@ class serviceTableSeeder extends Seeder
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'Рейды',
             'alias' => 'raids',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'Подземелья',
             'alias' => 'dungeons',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'Прокачка',
             'alias' => 'pumping',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'PVP',
             'alias' => 'pvp',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'Достижения',
             'alias' => 'achievements',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'Маунты',
             'alias' => 'mounts',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         Service::create([
             'name' => 'Прочее',
             'alias' => 'other',
             'description' => '',
-            'id_game' => 38,
+            'game_id' => 38,
         ]);
 
         // Epic Games
@@ -1050,7 +1050,7 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 39,
+            'game_id' => 39,
         ]);
 
         // Origin
@@ -1058,7 +1058,7 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 40,
+            'game_id' => 40,
         ]);
 
         // Steam
@@ -1066,21 +1066,21 @@ class serviceTableSeeder extends Seeder
             'name' => 'Пополнение баланса',
             'alias' => 'deposit',
             'description' => '',
-            'id_game' => 41,
+            'game_id' => 41,
         ]);
 
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 41,
+            'game_id' => 41,
         ]);
 
         Service::create([
             'name' => 'Подарки',
             'alias' => 'gifts',
             'description' => '',
-            'id_game' => 41,
+            'game_id' => 41,
         ]);
 
         // Uplay
@@ -1088,7 +1088,7 @@ class serviceTableSeeder extends Seeder
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
-            'id_game' => 42,
+            'game_id' => 42,
         ]);
     }
 }

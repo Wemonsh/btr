@@ -16,16 +16,16 @@ class gamesTableSeeder extends Seeder
             'name' => 'Aion',
             'alias' => 'aion',
             'card_image' => '/img/icons/Aion.png',
-            'full_image' => '',
-            'background' => '',
+            'full_image' => '/img/pages/Aion.png',
+            'background' => '#a71e33',
         ]);
 
         Game::create([
             'name' => 'Albion Online',
             'alias' => 'albion-online',
             'card_image' => '/img/icons/AlbionOnline.png',
-            'full_image' => '',
-            'background' => '',
+            'full_image' => '/img/pages/AlbionOnline.png',
+            'background' => '#780d93',
         ]);
 
         Game::create([

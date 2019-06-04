@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGamingServicesTable extends Migration
+class CreateGamingServicesCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateGamingServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('gaming_services', function (Blueprint $table) {
+        Schema::create('gaming_services_category', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('alias');
-            $table->string('description')->nullable();
-            $table->bigInteger('game_id')->unsigned();
-            $table->foreign('game_id')->references('id')->on('games');
+            $table->string('placeholder');
         });
     }
 
@@ -30,6 +27,6 @@ class CreateGamingServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gaming_services');
+        Schema::dropIfExists('gaming_services_category');
     }
 }

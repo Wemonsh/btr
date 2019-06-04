@@ -16,7 +16,7 @@
         .profile-header {
             padding-top: 75px;
             min-height: 700px;
-            background: url('/img/pages/wowfree.png') 100% 13% no-repeat, linear-gradient(235deg, #7B1A1A, #131B1D);
+            background: url('{{ $game['full_image'] }}') 100% 13% no-repeat, {{ $game['background'] }};
             background-position: top right, center;
         }
     </style>

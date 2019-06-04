@@ -12,7 +12,7 @@ class Game extends Model
     public $timestamps = false;
 
     public function gamingServices() {
-        return $this->hasMany('App\Service', 'id_game', 'id');
+        return $this->hasMany('App\Service', 'game_id', 'id');
     }
 
 }
