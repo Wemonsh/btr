@@ -49,6 +49,11 @@ body {
   -o-transition: 1s;
   transition: 1s; }
 
+.game-card > .content > a {
+  color: #333333;
+  text-decoration: none;
+}
+
 .game-card:hover::after {
   opacity: 1; }
 

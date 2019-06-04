@@ -16,6 +16,7 @@ class CreateGamingServicesTable extends Migration
         Schema::create('gaming_services', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('alias');
             $table->string('description')->nullable();
             $table->bigInteger('id_game')->unsigned();
             $table->foreign('id_game')->references('id')->on('games');

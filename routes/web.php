@@ -18,3 +18,7 @@ Auth::routes();
 Route::get('/home', 'MainController@index');
 Route::get('/wowfree', 'HomeController@game')->name('wow');
 Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');
+
+
+Route::get('/{game}/{service}', 'Game\ServiceController@index');
+

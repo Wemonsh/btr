@@ -8,6 +8,6 @@ class Service extends Model
 {
     protected $table = 'gaming_services';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'description', 'id_game'];
-//    protected $timestamps = false;
+    protected $fillable = ['name', 'alias', 'description', 'id_game'];
+    public $timestamps = false;
 }

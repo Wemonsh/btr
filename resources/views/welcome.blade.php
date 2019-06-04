@@ -8,10 +8,12 @@
     <meta charset="utf-8">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css">
+
 
     <link rel="stylesheet" type="text/css" href="/vendor/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="/vendor/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="/css/main.css">
     <title>Document</title>
 </head>
 <body>
@@ -261,10 +263,10 @@
                                     <input type="email" class="form-control" placeholder="Email" name="email">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Пароль" name="password">
+                                    <input type="password" class="form-control" placeholder="Пароль" name="password">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Повтор пароля" name="password_confirmation">
+                                    <input type="password" class="form-control" placeholder="Повтор пароля" name="password_confirmation">
                                 </div>
                                 <div class="form-group">
                                     <div class="form-check">
@@ -285,23 +287,47 @@
             </div>
 
             <div class="row games-card">
+            @foreach($games as $game)
+                <div class="col-md-4">
+                    <div class="game-card">
+                        <img class="preview" src="{{ $game['card_image'] }}" alt="">
+                        <a href="/{{ $game['alias'] }}">
+                            <div class="content">
+                                <h2>{{ $game['name'] }}</h2>
+                                <span>(?) предложений</span>
+                                <ul class="breads">
+                                    @foreach($game['gaming_services'] as $service)
+                                    <a href="/{{ $game['alias'] }}/{{ $service['alias'] }}" class="bread-items">{{ $service['name'] }}</a>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            @endforeach
+            </div>
+            <hr>
+
+            <div class="row games-card">
                 <div class="col-md-4">
                     <div href="#" class="game-card">
                         <img class="preview" src="img/icons/Aion.png" alt="">
-                        <div class="content">
-                            <h2>Aion</h2>
-                            <span>12 предложений</span>
-                            <ul class="breads">
-                                <a href="#1231" class="bread-items">Кинары</a>
-                                <a href="#123213" class="bread-items">Аккаутнты</a>
-                                <a href="#1232131" class="bread-items">Предметы</a>
-                                <a href="#1231" class="bread-items">Услуги</a>
-                            </ul>
-                        </div>
+                        <a href="/">
+                            <div class="content">
+                                <h2>Aion</h2>
+                                <span>12 предложений</span>
+                                <ul class="breads">
+                                    <a href="#1231" class="bread-items">Кинары</a>
+                                    <a href="#123213" class="bread-items">Аккаутнты</a>
+                                    <a href="#1232131" class="bread-items">Предметы</a>
+                                    <a href="#1231" class="bread-items">Услуги</a>
+                                </ul>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div href="#" class="game-card">
+                    <div class="game-card">
                         <img class="preview" src="img/icons/Albion Online.png" alt="">
                         <div class="content">
                             <h2>Albion Online</h2>
