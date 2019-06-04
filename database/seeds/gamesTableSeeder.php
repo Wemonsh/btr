@@ -109,14 +109,6 @@ class gamesTableSeeder extends Seeder
         ]);
 
         Game::create([
-            'name' => 'Epic games',
-            'alias' => 'epic-games',
-            'card_image' => '/img/icons/Epic_games.png',
-            'full_image' => '',
-            'background' => '',
-        ]);
-
-        Game::create([
             'name' => 'Escape from Tarkov',
             'alias' => 'escape-from-tarkov',
             'card_image' => '/img/icons/Escape_from_Tarkov.png',
@@ -196,10 +188,18 @@ class gamesTableSeeder extends Seeder
             'background' => '',
         ]);
 
+//        Game::create([
+//            'name' => 'Lineage 2 Classic (RU)',
+//            'alias' => 'lineage-2-classic-ru',
+//            'card_image' => '/img/icons/Lineage_2_Classic_RU.png',
+//            'full_image' => '',
+//            'background' => '',
+//        ]);
+
         Game::create([
-            'name' => 'Lineage 2 Classic (RU)',
-            'alias' => 'lineage-2-classic-ru',
-            'card_image' => '/img/icons/Lineage_2_Classic_RU.png',
+            'name' => 'Lineage (RU)',
+            'alias' => 'lineage-ru',
+            'card_image' => '/img/icons/lineage_ru.png',
             'full_image' => '',
             'background' => '',
         ]);
@@ -213,25 +213,9 @@ class gamesTableSeeder extends Seeder
         ]);
 
         Game::create([
-            'name' => 'Lineage (RU)',
-            'alias' => 'lineage-ru',
-            'card_image' => '/img/icons/lineage_ru.png',
-            'full_image' => '',
-            'background' => '',
-        ]);
-
-        Game::create([
             'name' => 'Neverwinter Online',
             'alias' => 'neverwinter-online',
             'card_image' => '/img/icons/Neverwinter_online.png',
-            'full_image' => '',
-            'background' => '',
-        ]);
-
-        Game::create([
-            'name' => 'Origin',
-            'alias' => 'origin',
-            'card_image' => '/img/icons/Origin.png',
             'full_image' => '',
             'background' => '',
         ]);
@@ -277,25 +261,9 @@ class gamesTableSeeder extends Seeder
         ]);
 
         Game::create([
-            'name' => 'Steam',
-            'alias' => 'steam',
-            'card_image' => '/img/icons/Steam.png',
-            'full_image' => '',
-            'background' => '',
-        ]);
-
-        Game::create([
             'name' => 'Tom Clancy\'s Rainbow Six',
             'alias' => 'tom-clancys-rainbow-six',
             'card_image' => '/img/icons/Tom_Clancys_Rainbow_Six.png',
-            'full_image' => '',
-            'background' => '',
-        ]);
-
-        Game::create([
-            'name' => 'Uplay',
-            'alias' => 'uplay',
-            'card_image' => '/img/icons/Uplay.png',
             'full_image' => '',
             'background' => '',
         ]);
@@ -340,13 +308,13 @@ class gamesTableSeeder extends Seeder
             'background' => '',
         ]);
 
-        Game::create([
-            'name' => 'wow',
-            'alias' => 'wow',
-            'card_image' => '/img/icons/wow.png',
-            'full_image' => '',
-            'background' => '',
-        ]);
+//        Game::create([
+//            'name' => 'wow',
+//            'alias' => 'wow',
+//            'card_image' => '/img/icons/wow.png',
+//            'full_image' => '',
+//            'background' => '',
+//        ]);
 
         Game::create([
             'name' => 'WOW Free',
@@ -360,6 +328,38 @@ class gamesTableSeeder extends Seeder
             'name' => 'WOW (RU|EU)',
             'alias' => 'wow-ru-eu',
             'card_image' => '/img/icons/WOW_RU_EU.png',
+            'full_image' => '',
+            'background' => '',
+        ]);
+
+        Game::create([
+            'name' => 'Epic games',
+            'alias' => 'epic-games',
+            'card_image' => '/img/icons/Epic_games.png',
+            'full_image' => '',
+            'background' => '',
+        ]);
+
+        Game::create([
+            'name' => 'Origin',
+            'alias' => 'origin',
+            'card_image' => '/img/icons/Origin.png',
+            'full_image' => '',
+            'background' => '',
+        ]);
+
+        Game::create([
+            'name' => 'Steam',
+            'alias' => 'steam',
+            'card_image' => '/img/icons/Steam.png',
+            'full_image' => '',
+            'background' => '',
+        ]);
+
+        Game::create([
+            'name' => 'Uplay',
+            'alias' => 'uplay',
+            'card_image' => '/img/icons/Uplay.png',
             'full_image' => '',
             'background' => '',
         ]);

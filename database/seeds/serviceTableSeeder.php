@@ -419,6 +419,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 15,
         ]);
 
+        // GTA 5
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -433,6 +434,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 16,
         ]);
 
+        // GTA SAMP, CRMP, RP
         Service::create([
             'name' => 'Вирты',
             'alias' => 'virts',
@@ -461,6 +463,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 17,
         ]);
 
+        // Guild Wars 2
         Service::create([
             'name' => 'Золото',
             'alias' => 'gold',
@@ -489,6 +492,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 18,
         ]);
 
+        // Gwent
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -503,6 +507,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 19,
         ]);
 
+        // Hearthstone
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -517,6 +522,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 20,
         ]);
 
+        // League of Legends
         Service::create([
             'name' => 'Riot Points',
             'alias' => 'riot-points',
@@ -538,6 +544,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 21,
         ]);
 
+        // Lineage 2 EU/NA
         Service::create([
             'name' => 'Адена',
             'alias' => 'adena',
@@ -567,6 +574,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 22,
         ]);
 
+        // Lineage 2 RU
         Service::create([
             'name' => 'Адена',
             'alias' => 'adena',
@@ -595,6 +603,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 23,
         ]);
 
+        // Lineage 2 Free
         Service::create([
             'name' => 'Адена',
             'alias' => 'adena',
@@ -630,6 +639,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 24,
         ]);
 
+        // Neverwinter online
         Service::create([
             'name' => 'Бриллианты',
             'alias' => 'diamonds',
@@ -658,6 +668,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 25,
         ]);
 
+        // Overwatch
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -679,6 +690,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 26,
         ]);
 
+        // Path of Exile
         Service::create([
             'name' => 'Сферы возвышения',
             'alias' => 'spheres-of-elevation',
@@ -728,6 +740,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 27,
         ]);
 
+        // Perfect World (RU)
         Service::create([
             'name' => 'Юани',
             'alias' => 'yuan',
@@ -756,6 +769,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 28,
         ]);
 
+        // PUBG
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -777,6 +791,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 29,
         ]);
 
+        // Revelation Online
         Service::create([
             'name' => 'Золото',
             'alias' => 'gold',
@@ -805,6 +820,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 30,
         ]);
 
+        // Tom Clancy's Rainbow 6
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -826,6 +842,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 31,
         ]);
 
+        // War Thunder
         Service::create([
             'name' => 'GAIJIN COINS',
             'alias' => 'gaijin-coins',
@@ -847,6 +864,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 32,
         ]);
 
+        // Warface
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -868,6 +886,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 33,
         ]);
 
+        // Warframe
         Service::create([
             'name' => 'Платина',
             'alias' => 'platinum',
@@ -896,6 +915,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 34,
         ]);
 
+        // World of Tanks
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -917,6 +937,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 35,
         ]);
 
+        // World of Warships
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -931,6 +952,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 36,
         ]);
 
+        // WOW FREE
         Service::create([
             'name' => 'Золото',
             'alias' => 'gold',
@@ -959,6 +981,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 37,
         ]);
 
+        // WOW RU/EU
         Service::create([
             'name' => 'Золото',
             'alias' => 'gold',
@@ -1022,6 +1045,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 38,
         ]);
 
+        // Epic Games
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -1029,6 +1053,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 39,
         ]);
 
+        // Origin
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
@@ -1036,6 +1061,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 40,
         ]);
 
+        // Steam
         Service::create([
             'name' => 'Пополнение баланса',
             'alias' => 'deposit',
@@ -1057,6 +1083,7 @@ class serviceTableSeeder extends Seeder
             'id_game' => 41,
         ]);
 
+        // Uplay
         Service::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
