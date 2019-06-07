@@ -35,24 +35,20 @@
             <div class="row">
                 <div class="col-10">
                     <form action="#" class="form-inline filter">
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сервер</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сторона</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
+
+                        @forelse($selects['category'] as $select)
+                            <div class="form-group">
+                                <select class="form-control" name="{{ $select['name'] }}">
+                                    <option selected disabled>{{ $select['placeholder'] }}</option>
+                                    @foreach($select['select'] as $value)
+                                        <option value="{{ $value['id'] }}">{{ $value['name'] }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        @empty
+                            <p>Нет категорий поиска</p>
+                        @endforelse
+
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                             <label class="form-check-label" for="inlineCheckbox1">Продавец в онлайне</label>
@@ -61,99 +57,6 @@
                 </div>
                 <div class="col-2">
                     <a class="btn-main">Продать золото</a>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            <div class="row">
-                <div class="col-10">
-                    <form action="#" class="form-inline filter">
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сервер</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сторона</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Расса</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Класс</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Продавец в онлайне</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-2">
-                    <a class="btn-main">Продать аккаунт</a>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            <div class="row">
-                <div class="col-10">
-                    <form action="#" class="form-inline filter">
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сервер</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сторона</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Тип</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Продавец в онлайне</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-2">
-                    <a class="btn-main">Продать аккаунт</a>
                 </div>
             </div>
         </div>

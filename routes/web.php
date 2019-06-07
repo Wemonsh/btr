@@ -22,3 +22,6 @@ Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');
 
 Route::get('/{game}/{service}', 'Game\ServiceController@index');
 
+Route::group(['prefix' => 'admin'], function () {
+    Route::match(['get', 'post'], '/', ['uses' => 'Admin\MainController@index', 'as' => 'dashboard']);
+});

@@ -11,7 +11,7 @@ class MainController extends Controller
 
         $games = Game::with('gamingServices')->get()->toArray();
 
-        dump($games);
+        //dump($games);
 
         $vars = [
             'games' => $games
