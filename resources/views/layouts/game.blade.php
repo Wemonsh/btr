@@ -66,6 +66,9 @@
     </main>
 
     <style>
+        .navbar {
+            box-shadow: 0px 20px 40px -20px #bec6de;
+        }
         .container {
             max-width: 1643px;
         }
