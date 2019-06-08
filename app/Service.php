@@ -11,7 +11,11 @@ class Service extends Model
     protected $fillable = ['name', 'alias', 'description', 'game_id'];
     public $timestamps = false;
 
+    public function game(){
+        return $this->hasOne('App\Game','id','game_id');
+    }
+
     public function category() {
         return $this->belongsToMany('App\ServiceCategory', 'service_category', 'services_id','category_id');
-}
+    }
 }

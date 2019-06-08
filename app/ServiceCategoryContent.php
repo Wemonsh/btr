@@ -12,6 +12,6 @@ class ServiceCategoryContent extends Model
     public $timestamps = false;
 
     public function gamingServices() {
-        return $this->hasOne('App\ServiceCategory', 'category_id', 'id');
+        return $this->hasOne('App\ServiceCategory', 'id', 'category_id');
     }
 }

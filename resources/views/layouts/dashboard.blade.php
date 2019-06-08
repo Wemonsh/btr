@@ -14,6 +14,7 @@
     <!-- Custom fonts for this template-->
     <link href="/dashboard/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
+
     <!-- Custom styles for this template-->
     <link href="/dashboard/css/sb-admin.css" rel="stylesheet">
 
@@ -87,28 +88,28 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{ route('dashboard') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="{{ route('gamesIndex') }}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Игры</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="{{ route('servicesIndex') }}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Услуги</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="{{ route('categoriesIndex') }}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Категории</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="{{ route('selectsIndex') }}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Селекты</span></a>
         </li>
@@ -119,14 +120,16 @@
         <div class="container-fluid">
 
             <!-- Breadcrumbs-->
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="index.html">Dashboard</a>
-                </li>
-                <li class="breadcrumb-item active">Blank Page</li>
-            </ol>
+        {{--            <ol class="breadcrumb">--}}
+        {{--                <li class="breadcrumb-item">--}}
+        {{--                    <a href="index.html">Dashboard</a>--}}
+        {{--                </li>--}}
+        {{--                <li class="breadcrumb-item active">Blank Page</li>--}}
+        {{--            </ol>--}}
+        @yield('breadcrumbs')
 
-            <!-- Page Content -->
+
+        <!-- Page Content -->
             @yield('content')
 
         </div>

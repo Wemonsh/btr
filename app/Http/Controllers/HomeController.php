@@ -36,7 +36,7 @@ class HomeController extends Controller
           'games' => $games
         ];
 
-        dump($games);
+        //dump($games);
 
 
         return view('welcome', $vars);
