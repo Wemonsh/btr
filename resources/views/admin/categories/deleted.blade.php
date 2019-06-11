@@ -5,17 +5,18 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Главная</a></li>
             <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Категории</li>
+            <li class="breadcrumb-item"><a href="{{ route('categoriesIndex') }}">Категории</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Удаленные категории</li>
         </ol>
     </nav>
 @endsection
 
 @section('content')
-    <h1>Категории</h1>
+    <h1>Удаленные категории</h1>
     <hr>
-    <div>
-        <a class="btn btn-secondary text-light" href="{{ route('categoriesCreate') }}">Добавить категорию</a>
-    </div>
+    {{--    <div>--}}
+    {{--        <a class="btn btn-secondary text-light" href="{{ route('gamesCreate') }}">Добавить игру</a>--}}
+    {{--    </div>--}}
     <table class="table table-bordered table-sm mt-3">
         <thead>
         <tr>
@@ -37,7 +38,7 @@
                     @if(count($categories) != 0)
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <a class="btn btn-secondary btn-sm text-light" href="{{ route('categoriesEdit', $category->id) }}" title="Редактировать">Редактировать<i class="fas fa-pen"></i></a>
-                            <a class="btn btn-secondary btn-sm text-light" href="{{ route('categoriesDelete', $category->id) }}" title="Удалить">Удалить<i class="fas fa-trash-alt"></i></a>
+                            <a class="btn btn-secondary btn-sm text-light" href="{{ route('categoriesRecover', $category->id) }}" title="Восстановить">Восстановить<i class="fas fa-trash-alt"></i></a>
                         </div>
                     @endif
                 </td>
@@ -49,5 +50,6 @@
     {{ $categories->render() }}
 
     <hr>
-    <a href="{{ route('categoriesDeleted') }}" title="Отобразить удаленные категории">Отобразить удаленные категории</a>
+    <a href="{{ route('categoriesIndex') }}" title="Отобразить список активных категорий">Отобразить список активных категорий</a>
 @endsection
+

@@ -97,8 +97,32 @@ class GamesController extends Controller
         }
     }
 
-    public function delete() {
-        echo __METHOD__;
+    public function delete($id) {
+        if ($id != null) {
+            Game::find($id)->delete();
+        }
+
+        return redirect('/admin/games');
+    }
+
+    public function recover($id) {
+        if ($id != null) {
+            Game::onlyTrashed()->find($id)->restore();
+        }
+
+        return redirect('/admin/games');
+    }
+
+    public function deleted() {
+        if (view()->exists('admin.games.deleted')) {
+
+            $vars = [
+                'games' => Game::onlyTrashed()->paginate(20)
+            ];
+            return view('admin.games.deleted', $vars);
+        } else {
+            abort(404);
+        }
     }
 
     public function show(Request $request, $id) {

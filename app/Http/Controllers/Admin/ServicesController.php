@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Game;
 use App\Service;
+use App\ServiceCategory;
+use App\ServiceCategoryContent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -75,7 +77,45 @@ class ServicesController extends Controller
         }
     }
 
-    public function delete() {
-        echo __METHOD__;
+    public function delete($id) {
+        if ($id != null) {
+            Service::find($id)->delete();
+        }
+
+        return redirect('/admin/services');
+    }
+
+    public function recover($id) {
+        if ($id != null) {
+            Service::onlyTrashed()->find($id)->restore();
+        }
+
+        return redirect('/admin/services');
+    }
+
+    public function deleted() {
+        if (view()->exists('admin.services.deleted')) {
+
+            $vars = [
+                'services' => Service::onlyTrashed()->paginate(20)
+            ];
+            return view('admin.services.deleted', $vars);
+        } else {
+            abort(404);
+        }
+    }
+
+    public function show(Request $request, $id) {
+        if (view()->exists('admin.services.show')) {
+
+            $vars = [
+                'service' => ServiceCategory::with('service')->where('id','=', $id)->first(),
+                'id' => $id,
+            ];
+            dump(ServiceCategory::with('service')->where('id','=', $id)->first());
+            return view('admin.services.show', $vars);
+        } else {
+            abort(404);
+        }
     }
 }

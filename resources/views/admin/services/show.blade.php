@@ -21,10 +21,10 @@
         <thead>
         <tr>
             <th class="align-middle text-center" scope="col">#</th>
-            <th class="align-middle text-center" scope="col">Игра</th>
             <th class="align-middle text-center" scope="col">Название услуги</th>
             <th class="align-middle text-center" scope="col">Alias</th>
             <th class="align-middle text-center" scope="col">Описание</th>
+            <th class="align-middle text-center" scope="col">Игра</th>
             @if($game != null)
                 <th class="align-middle text-center" scope="col">Действие</th>
             @endif
@@ -34,12 +34,12 @@
         @foreach($game->gamingServices as $service)
             <tr>
                 <td class="align-middle text-center">{{ $service->id }}</td>
-                <td class="align-middle text-center">{{ $service->game->name }}</td>
                 <td class="align-middle text-center">
                     <a href="{{ route('servicesShow', $service->id) }}" title="{{ $service->name }}">{{ $service->name }}</a>
                 </td>
                 <td class="align-middle text-center">{{ $service->alias }}</td>
                 <td class="align-middle text-center">{{ $service->description }}</td>
+                <td class="align-middle text-center">{{ $service->game->name }}</td>
                 <td class="align-middle text-center">
                     @if($game != null)
                         <div class="btn-group" role="group" aria-label="Basic example">

@@ -5,17 +5,18 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Главная</a></li>
             <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Селекты</li>
+            <li class="breadcrumb-item"><a href="{{ route('selectsIndex') }}">Селекты</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Удаленные селекты</li>
         </ol>
     </nav>
 @endsection
 
 @section('content')
-    <h1>Селекты</h1>
+    <h1>Удаленные селекты</h1>
     <hr>
-    <div>
-        <a class="btn btn-secondary text-light" href="{{ route('selectsCreate') }}">Добавить селект</a>
-    </div>
+{{--    <div>--}}
+{{--        <a class="btn btn-secondary text-light" href="{{ route('selectsCreate') }}">Добавить селект</a>--}}
+{{--    </div>--}}
     <table class="table table-bordered table-sm mt-3">
         <thead>
         <tr>
@@ -37,7 +38,7 @@
                     @if(count($selects) != 0)
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <a class="btn btn-secondary btn-sm text-light" href="{{ route('selectsEdit', $select->id) }}" title="Редактировать">Редактировать<i class="fas fa-pen"></i></a>
-                            <a class="btn btn-secondary btn-sm text-light" href="{{ route('selectsDelete', $select->id) }}" title="Удалить">Удалить<i class="fas fa-trash-alt"></i></a>
+                            <a class="btn btn-secondary btn-sm text-light" href="{{ route('selectsRecover', $select->id) }}" title="Восстановить">Восстановить<i class="fas fa-trash-alt"></i></a>
                         </div>
                     @endif
                 </td>
@@ -49,5 +50,5 @@
     {{ $selects->render() }}
 
     <hr>
-    <a href="{{ route('selectsDeleted') }}" title="Отобразить удаленные селекты">Отобразить удаленные селекты</a>
+    <a href="{{ route('selectsIndex') }}" title="Отобразить список активных селектов">Отобразить список активных селектов</a>
 @endsection

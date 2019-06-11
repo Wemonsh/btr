@@ -5,17 +5,18 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Главная</a></li>
             <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Игры</li>
+            <li class="breadcrumb-item"><a href="{{ route('gamesIndex') }}">Игры</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Удаленные игры</li>
         </ol>
     </nav>
 @endsection
 
 @section('content')
-    <h1>Игры</h1>
+    <h1>Удаленные игры</h1>
     <hr>
-    <div>
-        <a class="btn btn-secondary text-light" href="{{ route('gamesCreate') }}">Добавить игру</a>
-    </div>
+{{--    <div>--}}
+{{--        <a class="btn btn-secondary text-light" href="{{ route('gamesCreate') }}">Добавить игру</a>--}}
+{{--    </div>--}}
     <table class="table table-bordered table-sm mt-3">
         <thead>
         <tr>
@@ -45,7 +46,7 @@
                     @if(count($games) != 0)
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <a class="btn btn-secondary btn-sm text-light" href="{{ route('gamesEdit', $game->id) }}" title="Редактировать">Редактировать<i class="fas fa-pen"></i></a>
-                            <a class="btn btn-secondary btn-sm text-light" href="{{ route('gamesDelete', $game->id) }}" title="Удалить">Удалить<i class="fas fa-trash-alt"></i></a>
+                            <a class="btn btn-secondary btn-sm text-light" href="{{ route('gamesRecover', $game->id) }}" title="Восстановить">Восстановить<i class="fas fa-trash-alt"></i></a>
                         </div>
                     @endif
                 </td>
@@ -57,5 +58,5 @@
     {{ $games->render() }}
 
     <hr>
-    <a href="{{ route('gamesDeleted') }}" title="Отобразить удаленные игры">Отобразить удаленные игры</a>
+    <a href="{{ route('gamesIndex') }}" title="Отобразить список активных игр">Отобразить список активных игр</a>
 @endsection

@@ -20,6 +20,8 @@ class CreateGamesTable extends Migration
             $table->string('card_image');
             $table->string('full_image');
             $table->string('background');
+            //$table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -19,6 +19,7 @@ class CreateServiceCategoryTable extends Migration
             $table->foreign('services_id')->references('id')->on('gaming_services');
             $table->bigInteger('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('gaming_services_category');
+            $table->softDeletes();
         });
     }
 

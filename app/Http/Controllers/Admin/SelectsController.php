@@ -72,7 +72,31 @@ class SelectsController extends Controller
         }
     }
 
-    public function delete() {
-        echo __METHOD__;
+    public function delete($id) {
+        if ($id != null) {
+            ServiceCategoryContent::find($id)->delete();
+        }
+
+        return redirect('/admin/selects');
+    }
+
+    public function recover($id) {
+        if ($id != null) {
+            ServiceCategoryContent::onlyTrashed()->find($id)->restore();
+        }
+
+        return redirect('/admin/selects');
+    }
+
+    public function deleted() {
+        if (view()->exists('admin.selects.deleted')) {
+
+            $vars = [
+                'services' => ServiceCategoryContent::onlyTrashed()->paginate(20)
+            ];
+            return view('admin.selects.deleted', $vars);
+        } else {
+            abort(404);
+        }
     }
 }

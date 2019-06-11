@@ -66,7 +66,31 @@ class CategoriesController extends Controller
         }
     }
 
-    public function delete() {
-        echo __METHOD__;
+    public function delete($id) {
+        if ($id != null) {
+            ServiceCategory::find($id)->delete();
+        }
+
+        return redirect('/admin/categories');
+    }
+
+    public function recover($id) {
+        if ($id != null) {
+            ServiceCategory::onlyTrashed()->find($id)->restore();
+        }
+
+        return redirect('/admin/categories');
+    }
+
+    public function deleted() {
+        if (view()->exists('admin.categories.deleted')) {
+
+            $vars = [
+                'services' => ServiceCategory::onlyTrashed()->paginate(20)
+            ];
+            return view('admin.categories.deleted', $vars);
+        } else {
+            abort(404);
+        }
     }
 }
