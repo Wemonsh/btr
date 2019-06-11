@@ -39,7 +39,7 @@ class HomeController extends Controller
         //dump($games);
 
 
-        return view('welcome', $vars);
+        return view('home', $vars);
     }
 
     public function game() {

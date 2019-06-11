@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Game;
 
 use App\Game;
+use App\Order;
 use App\Service;
 use App\ServiceCategoryContent;
 use Illuminate\Http\Request;
@@ -28,9 +29,27 @@ class ServiceController extends Controller
 
 
 //        dump($vars);
-//        dump($ser);
+
 
         $vars['selects'] = $ser;
+
+
+        $orders = Order::with('game', 'service', 'seller', 'customer')
+            ->where('game_id','=', $vars['game']['id'])
+            ->where('service_id', '=', $vars['selects']['id'])
+            ->where('paid', '!=', 1)
+//            ->whereRaw('JSON_CONTAINS(properties->"$[*].name", \'"Aion server 2"\')')
+            ->get();
+
+        foreach ($orders as $order) {
+
+            $properties = json_decode($order->properties);
+            $order->properties = $properties;
+        }
+
+        $vars['orders'] = $orders->toArray();
+
+        //dump($vars['orders']);
 
         return view('games.template', $vars);
     }

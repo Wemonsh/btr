@@ -16,7 +16,7 @@ Route::get('/', 'MainController@index');
 Auth::routes();
 
 Route::get('/home', 'MainController@index');
-Route::get('/wowfree', 'HomeController@game')->name('wow');
+Route::get('/profile', 'HomeController@index')->name('home');
 Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');
 
 
@@ -53,5 +53,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::match(['get', 'post'], '/selects/delete/{id}', ['uses' => 'Admin\SelectsController@delete', 'as' => 'selectsDelete']);
 });
 
-Route::get('/{game}/{service}', 'Game\ServiceController@index');
+Route::match(['get', 'post'], '/{game}/{service}', ['uses' => 'Game\ServiceController@index', 'as' => 'game']);
+
+Route::match(['get', 'post'], '/{game}/{service}/create', ['uses' => 'Game\OrderController@create', 'as' => 'orderCreate']);
 

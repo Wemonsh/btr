@@ -49,68 +49,46 @@
                             <p>Нет категорий поиска</p>
                         @endforelse
 
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Продавец в онлайне</label>
+                        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlInline" checked>
+                            <label class="custom-control-label" for="customControlInline">Продавец онлайн</label>
                         </div>
+
                     </form>
                 </div>
                 <div class="col-2">
-                    <a class="btn-main">Продать золото</a>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-f" role="tabpanel" aria-labelledby="nav-contact-tab">
-            <div class="row">
-                <div class="col-10">
-                    <form action="#" class="form-inline filter">
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сервер</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Сторона</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option selected>Тип услуги</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Продавец в онлайне</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-2">
-                    <a class="btn-main">Продать аккаунт</a>
+                    <a href="/{{ $gameAlias }}/{{ $serviceAlias }}/create" class="btn-main">Продать золото</a>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="table-wrapper">
-        <br>
-        <div class="alert alert-info" role="alert">
-            В данной категории активных сделок нет!
-        </div>
-        <br>
 
+        <table>
+            <thead>
+                <tr>
+                    @foreach($selects['category'] as $select)
+                    <th>{{ $select['placeholder'] }}</th>
+                    @endforeach
+                    <th>Описание</th>
+                    <th>Продавец</th>
+                    <th>Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($orders as $order)
+                    <tr>
+                        @foreach($order['properties'] as $value)
+                            <td>{{ $value->name }}</td>
+                        @endforeach
+                        <td width="300px">{{ $order['description'] }}</td>
+                        <td>{{ $order['seller']['name'] }}</td>
+                        <td>{{ $order['cost'] }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 
 
@@ -120,7 +98,36 @@
 
         .table-wrapper {
             margin-top: 10px;
+        }
+
+        .table-wrapper > table {
+            width: 100%;
             background-color: #ffffff;
+            box-shadow: 0px 20px 40px -20px #bec6de;
+            border-radius: 6px;
+        }
+
+        .table-wrapper > table > thead > tr > th {
+            background: #f2f3f6;
+            border-radius: 6px 6px 0 0;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            padding: 20px 0px;
+        }
+
+        .table-wrapper > table > tbody > tr > td {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            padding: 20px 0px;
+            border-top: 1px solid #f2f3f6;
+        }
+
+        form {
+            margin-block-end: 0em;
         }
 
         .btn-main {
@@ -135,11 +142,13 @@
             border-radius: 30px;
             color: #ffffff !important;
             transition: 2s;
+            box-shadow: 0px 20px 40px -20px #bec6de;
         }
 
         .btn-main:hover {
             cursor: pointer;
             box-shadow: 0px 20px 40px -20px #01F6FD;
+            text-decoration: none;
         }
 
         .filter select {
@@ -148,7 +157,7 @@
             margin-right: 30px;
             border-radius: 29px;
             background: #f2f3f6;
-            box-shadow: 0px 20px 40px- 20px #bec6de;
+            box-shadow: 0px 20px 40px -20px #bec6de;
         }
 
 
