@@ -74,3 +74,7 @@ Route::match(['get', 'post'], '/{game}/{service}', ['uses' => 'Game\ServiceContr
 
 Route::match(['get', 'post'], '/{game}/{service}/create', ['uses' => 'Game\OrderController@create', 'as' => 'orderCreate']);
 
+Route::match(['get', 'post'], '/{game}/{service}/show/{id}', ['uses' => 'Game\OrderController@show', 'as' => 'orderShow']);
+
+Route::match(['get', 'post'], '/{game}/{service}/buy/{id}', ['uses' => 'Game\OrderController@buy', 'as' => 'orderBuy']);
+

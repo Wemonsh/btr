@@ -82,7 +82,7 @@
                         @foreach($order['properties'] as $value)
                             <td>{{ $value->name }}</td>
                         @endforeach
-                        <td width="300px">{{ $order['description'] }}</td>
+                        <td width="300px"><a href="/{{ $gameAlias }}/{{ $serviceAlias }}/show/{{ $order['id'] }}">{{ $order['description'] }}</a></td>
                         <td>{{ $order['seller']['name'] }}</td>
                         <td>{{ $order['cost'] }}</td>
                     </tr>

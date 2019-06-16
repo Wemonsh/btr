@@ -40,7 +40,7 @@
                 <div id="upload-container" class="form-group">
                     <img id="upload-image" src="/img/Shape.png">
                     <div>
-                        <input id="file-input" type="file" name="file" multiple>
+                        <input id="file-input" type="file" name="file[]" id="files" multiple>
                         <label for="file-input">Загрузить скриншот</label>
                     </div>
                 </div>
