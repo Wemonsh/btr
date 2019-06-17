@@ -74,6 +74,7 @@ class OrderController extends Controller
                     'description' => $request['description'],
                     'properties' => $properties,
                     'cost' => $request['cost'],
+                    'images' => $json,
                     'game_id' => $vars['game']['id'],
                     'service_id' => $vars['service']['id'],
                     'seller_id' => Auth::user()->id,

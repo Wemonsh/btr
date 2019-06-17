@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url("../fonts/Neo Sans Pro.eot");
+  src: url("../fonts/Neo Sans Pro.eot?#iefix") format("embedded-opentype"), url("../fonts/Neo Sans Pro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NeoSansPro-Regular';
+  src: url("../fonts/NeoSansPro-Regular.svg#NeoSansPro-Regular") format("svg"), url("../fonts/NeoSansPro-Regular.ttf") format("truetype"), url("../fonts/NeoSansPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: 'Neo Sans Pro'; }
+
+main {
+  background-color: #f3f2f6;
+  min-height: -webkit-calc(100vh - 200px - 56px);
+  min-height: calc(100vh - 200px - 56px); }
+
+.navbar {
+  font-size: 18px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 20px 40px -20px #bec6de;
+          box-shadow: 0px 20px 40px -20px #bec6de; }
+  .navbar .container {
+    max-width: 1640px; }
+    .navbar .container .button-exit {
+      color: #333333;
+      padding: 5px 10px;
+      border-radius: 30px;
+      border: 2px solid #333333;
+      text-decoration: none; }
+
+#faq .header {
+  padding-top: 50px;
+  background-color: #ffffff; }
+  #faq .header .nav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1640px;
+    border-bottom: none; }
+    #faq .header .nav .nav-item .nav-link {
+      padding: 15px 30px;
+      border: none;
+      color: #333333;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px; }
+    #faq .header .nav .nav-item .active {
+      position: relative; }
+      #faq .header .nav .nav-item .active::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6px;
+        background: -o-linear-gradient(315deg, #0A83FF, #02EFFD);
+        background: linear-gradient(135deg, #0A83FF, #02EFFD); }
+
+#faq .tab-content {
+  padding: 40px 0; }
+  #faq .tab-content .container .accordion .card {
+    border: none;
+    margin-bottom: 10px; }
+    #faq .tab-content .container .accordion .card .card-header {
+      background-color: #ffffff;
+      border-bottom: 2px solid #f3f2f6; }
+      #faq .tab-content .container .accordion .card .card-header p {
+        margin: 0;
+        color: #333333;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px; }
+        #faq .tab-content .container .accordion .card .card-header p:hover {
+          text-decoration: none; }
+
+#order {
+  padding-top: 50px; }
+  #order .container {
+    max-width: 1640px; }
+    #order .container .information {
+      padding: 50px 30px;
+      border-radius: 6px;
+      background-color: #ffffff;
+      -webkit-box-shadow: 0px 20px 40px -20px #bec6de;
+              box-shadow: 0px 20px 40px -20px #bec6de; }
+      #order .container .information p {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 44px; }
+      #order .container .information .cost {
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 400; }
+      #order .container .information .btn-payment {
+        border-radius: 30px;
+        padding: 15px 60px;
+        background: -o-linear-gradient(315deg, #0B7FFF, #01F6FD);
+        background: linear-gradient(135deg, #0B7FFF, #01F6FD);
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        #order .container .information .btn-payment:hover {
+          text-decoration: none;
+          -webkit-box-shadow: 0px 20px 40px -20px #01F6FD;
+                  box-shadow: 0px 20px 40px -20px #01F6FD; }
+      #order .container .information .description {
+        margin-top: 10px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 44px; }
+        #order .container .information .description:before {
+          display: inline-block;
+          width: 15px;
+          height: 16px;
+          margin-right: 5px;
+          content: '';
+          background-image: url("../img/shield.svg");
+          background-repeat: no-repeat; }
+      #order .container .information ul {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 44px; }
+        #order .container .information ul li {
+          border-top: 1px solid #f3f2f6; }
+    #order .container .description {
+      margin: 30px 0; }
+      #order .container .description .nav {
+        border-radius: 6px 6px 0 0;
+        background-color: #ffffff;
+        border-bottom: none;
+        border-bottom: 2px solid #f3f2f6; }
+      #order .container .description .nav-item .nav-link {
+        padding: 30px 30px 15px;
+        border: none;
+        color: #333333;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px; }
+      #order .container .description .nav-item .active {
+        position: relative; }
+        #order .container .description .nav-item .active::before {
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 6px;
+          background: -o-linear-gradient(315deg, #0A83FF, #02EFFD);
+          background: linear-gradient(135deg, #0A83FF, #02EFFD); }
+      #order .container .description .tab-content {
+        border-radius: 0 0 6px 6px;
+        -webkit-box-shadow: 0px 20px 40px -20px #bec6de;
+                box-shadow: 0px 20px 40px -20px #bec6de;
+        background-color: #ffffff;
+        padding: 30px 30px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 34px; }
+
+#reviews {
+  margin: 0 auto;
+  padding: 50px 15px;
+  max-width: 1640px; }
+  #reviews h1 {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 56px; }
+  #reviews .card-columns {
+    -webkit-column-count: 4;
+       -moz-column-count: 4;
+            column-count: 4; }
+    #reviews .card-columns .card {
+      margin-bottom: 20px;
+      border: none;
+      background: #ffffff;
+      -webkit-box-shadow: 0px 20px 40px -20px #bec6de;
+              box-shadow: 0px 20px 40px -20px #bec6de; }
+      #reviews .card-columns .card .card-body .links {
+        padding-left: 0px;
+        display: inline-block; }
+        #reviews .card-columns .card .card-body .links .link {
+          margin-top: 0;
+          display: inline-block;
+          list-style: none; }
+          #reviews .card-columns .card .card-body .links .link a {
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: #000000;
+            background: #f2f3f6;
+            font-size: 12px;
+            font-weight: 400; }
+            #reviews .card-columns .card .card-body .links .link a:hover {
+              text-decoration: none;
+              color: #ffffff;
+              background: -o-linear-gradient(315deg, #0A83FF, #02EFFD);
+              background: linear-gradient(135deg, #0A83FF, #02EFFD); }
+      #reviews .card-columns .card .card-body .date {
+        opacity: 0.8;
+        padding: 5px 0;
+        float: right;
+        font-size: 12px;
+        font-weight: 400; }
+      #reviews .card-columns .card .card-body .card-title {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px; }
+      #reviews .card-columns .card .card-body .card-text {
+        opacity: 0.8;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px; }
+
+footer {
+  padding: 20px 0;
+  height: 180px;
+  background: #ffffff; }
+  footer ul {
+    list-style: none; }
+    footer ul li a {
+      color: #9b9b9b;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 34px; }
+      footer ul li a:hover {
+        text-decoration: none;
+        color: #000000; }
