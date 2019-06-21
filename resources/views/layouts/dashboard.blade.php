@@ -94,6 +94,11 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('usersIndex') }}">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Пользователи</span></a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('gamesIndex') }}">
                 <i class="fas fa-fw fa-table"></i>
                 <span>Игры</span></a>

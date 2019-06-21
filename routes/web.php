@@ -22,8 +22,15 @@ Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');
 
 
 // Admin
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::match(['get', 'post'], '/', ['uses' => 'Admin\MainController@index', 'as' => 'dashboard']);
+
+    // Users
+    Route::match(['get', 'post'], '/users' ,['uses' => 'Admin\UsersController@index', 'as' => 'usersIndex']);
+    Route::match(['get', 'post'], '/users/edit/{id}' ,['uses' => 'Admin\UsersController@edit', 'as' => 'usersEdit']);
+    Route::match(['get', 'post'], '/users/delete/{id}', ['uses' => 'Admin\UsersController@delete', 'as' => 'usersDelete']);
+
+    Route::match(['get', 'post'], '/users/deleted' ,['uses' => 'Admin\UsersController@deleted', 'as' => 'usersDeleted']);
 
     // Games
     Route::match(['get', 'post'], '/games' ,['uses' => 'Admin\GamesController@index', 'as' => 'gamesIndex']);
