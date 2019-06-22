@@ -15,7 +15,7 @@ class Order extends Model
         return $this->hasOne('App\Game','id','game_id');
     }
     public function service () {
-        return $this->hasOne('App\Service','id','service_id');
+        return $this->hasOne('App\Category','id','service_id');
     }
 
     public function seller () {

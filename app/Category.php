@@ -5,9 +5,9 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Service extends Model
+class Category extends Model
 {
-    protected $table = 'gaming_services';
+    protected $table = 'categories';
     protected $primaryKey = 'id';
     protected $fillable = ['name', 'alias', 'description', 'game_id'];
     public $timestamps = false;
@@ -18,7 +18,9 @@ class Service extends Model
         return $this->hasOne('App\Game','id','game_id');
     }
 
-    public function category() {
-        return $this->belongsToMany('App\ServiceCategory', 'service_category', 'services_id','category_id');
+    public function selects()
+    {
+        return $this->belongsToMany(Select::class);
     }
+
 }

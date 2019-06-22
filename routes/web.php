@@ -54,13 +54,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
         Route::match(['get', 'post'], '/services/deleted' ,['uses' => 'Admin\ServicesController@deleted', 'as' => 'servicesDeleted']);
         Route::match(['get', 'post'], '/services/recover/{id}', ['uses' => 'Admin\ServicesController@recover', 'as' => 'servicesRecover']);
 
-    // Categories
+    // Category
     Route::match(['get', 'post'], '/categories' ,['uses' => 'Admin\CategoriesController@index', 'as' => 'categoriesIndex']);
     Route::match(['get', 'post'], '/categories/create' ,['uses' => 'Admin\CategoriesController@create', 'as' => 'categoriesCreate']);
     Route::match(['get', 'post'], '/categories/edit/{id}' ,['uses' => 'Admin\CategoriesController@edit', 'as' => 'categoriesEdit']);
     Route::match(['get', 'post'], '/categories/delete/{id}', ['uses' => 'Admin\CategoriesController@delete', 'as' => 'categoriesDelete']);
 
-        // Test Categories
+        // Test Category
         Route::match(['get', 'post'], '/categories/show/{id}', ['uses' => 'Admin\CategoriesController@show', 'as' => 'categoriesShow']);
         Route::match(['get', 'post'], '/categories/deleted' ,['uses' => 'Admin\CategoriesController@deleted', 'as' => 'categoriesDeleted']);
         Route::match(['get', 'post'], '/categories/recover/{id}', ['uses' => 'Admin\CategoriesController@recover', 'as' => 'categoriesRecover']);

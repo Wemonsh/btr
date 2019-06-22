@@ -10,12 +10,12 @@
         <div class="row">
             <div class="col-8">
                 <div class="row">
-                @foreach($selects['category'] as $select)
+                @foreach($category['selects'] as $value)
                     <div class="form-group col-6">
-                        <select class="form-control" name="{{ $select['name'] }}">
-                            <option selected disabled>{{ $select['placeholder'] }}</option>
-                            @foreach($select['select'] as $value)
-                                <option value="{{ $value['id'] }}">{{ $value['name'] }}</option>
+                        <select class="form-control" name="{{ $value['name'] }}">
+                            <option selected disabled>{{ $value['placeholder'] }}</option>
+                            @foreach($value['content'] as $item)
+                                <option value="{{ $item['id'] }}">{{ $item['name'] }}</option>
                             @endforeach
                         </select>
                     </div>

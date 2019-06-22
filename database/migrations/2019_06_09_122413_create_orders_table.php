@@ -24,7 +24,7 @@ class CreateOrdersTable extends Migration
             $table->bigInteger('game_id')->unsigned();
             $table->foreign('game_id')->references('id')->on('games');
             $table->bigInteger('service_id')->unsigned();
-            $table->foreign('service_id')->references('id')->on('gaming_services');
+            $table->foreign('service_id')->references('id')->on('categories');
 
             $table->bigInteger('seller_id')->unsigned();
             $table->foreign('seller_id')->references('id')->on('users');

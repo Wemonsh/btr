@@ -14,8 +14,8 @@ class Game extends Model
 
     use SoftDeletes;
 
-    public function gamingServices() {
-        return $this->hasMany('App\Service', 'game_id', 'id');
+    public function categories() {
+        return $this->hasMany(Category::class);
     }
 
 }

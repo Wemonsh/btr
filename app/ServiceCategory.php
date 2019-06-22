@@ -15,7 +15,7 @@ class ServiceCategory extends Model
     use SoftDeletes;
 
     public function service() {
-        return $this->belongsToMany('App\Service', 'service_category', 'services_id','category_id');
+        return $this->belongsToMany('App\Category', 'service_category', 'services_id','category_id');
     }
 
 }

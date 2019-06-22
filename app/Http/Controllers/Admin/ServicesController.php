@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Game;
-use App\Service;
+use App\Category;
 use App\ServiceCategory;
 use App\ServiceCategoryContent;
 use Illuminate\Http\Request;
@@ -15,7 +15,7 @@ class ServicesController extends Controller
         if (view()->exists('admin.services.index')) {
 
             $vars = [
-                'services' => Service::with('game')->paginate(20)
+                'services' => Category::with('game')->paginate(20)
             ];
             return view('admin.services.index', $vars);
         } else {
@@ -27,7 +27,7 @@ class ServicesController extends Controller
         if (view()->exists('admin.services.create')) {
             if ($request->isMethod('post'))
             {
-                Service::create([
+                Category::create([
                     'name' => $request->input('name'),
                     'alias' => $request->input('alias'),
                     'description' => $request->input('description'),
@@ -50,7 +50,7 @@ class ServicesController extends Controller
         if (view()->exists('admin.services.edit')) {
             if ($request->isMethod('post')) {
 
-                $service = Service::where('id','=', $id)->first();
+                $service = Category::where('id','=', $id)->first();
                 $service->name = $request->input('name');
                 $service->alias = $request->input('alias');
                 $service->description = $request->input('description');
@@ -59,7 +59,7 @@ class ServicesController extends Controller
 
                 return redirect('/admin/services');
             } else {
-                $service = Service::where('id','=', $id)->first();
+                $service = Category::where('id','=', $id)->first();
                 if ($service != null) {
                     $vars = [
                         'service' => $service,
@@ -79,7 +79,7 @@ class ServicesController extends Controller
 
     public function delete($id) {
         if ($id != null) {
-            Service::find($id)->delete();
+            Category::find($id)->delete();
         }
 
         return redirect('/admin/services');
@@ -87,7 +87,7 @@ class ServicesController extends Controller
 
     public function recover($id) {
         if ($id != null) {
-            Service::onlyTrashed()->find($id)->restore();
+            Category::onlyTrashed()->find($id)->restore();
         }
 
         return redirect('/admin/services');
@@ -97,7 +97,7 @@ class ServicesController extends Controller
         if (view()->exists('admin.services.deleted')) {
 
             $vars = [
-                'services' => Service::onlyTrashed()->paginate(20)
+                'services' => Category::onlyTrashed()->paginate(20)
             ];
             return view('admin.services.deleted', $vars);
         } else {

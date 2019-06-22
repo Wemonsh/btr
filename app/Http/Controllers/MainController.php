@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Select;
 use Illuminate\Http\Request;
 use App\Game;
 
@@ -9,9 +11,7 @@ class MainController extends Controller
 {
     public function index() {
 
-        $games = Game::with('gamingServices')->get()->toArray();
-
-        //dump($games);
+        $games = Game::with('categories')->get()->toArray();
 
         $vars = [
             'games' => $games

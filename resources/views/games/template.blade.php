@@ -1,17 +1,19 @@
 @extends('layouts.game')
 
 @section('header')
+
+
+
     <div class="profile-header">
         <div class="container">
             <h1 class="headline">{{ $game['name'] }}</h1>
-            @foreach($game['gaming_services'] as $service)
-                @if($service['alias'] == $serviceAlias)
-                    <p class="description">{{ $service['alias'].' - '.$service['description'] }}</p>
+            @foreach($game['categories'] as $value)
+                @if($value['alias'] == $serviceAlias)
+                    <p class="description">{{ $value['alias'].' - '.$value['description'] }}</p>
                 @endif
             @endforeach
         </div>
     </div>
-
     <style>
         .profile-header {
             padding-top: 75px;
@@ -25,8 +27,8 @@
 @section('content')
     <nav>
         <div class="nav nav-tabs">
-            @foreach($game['gaming_services'] as $service)
-                <a class="nav-item nav-link{{ $service['alias'] == $serviceAlias ? ' active' : null }}" href="/{{ $gameAlias }}/{{ $service['alias'] }}" >{{ $service['name'] }}</a>
+            @foreach($game['categories'] as $value)
+                <a class="nav-item nav-link{{ $value['alias'] == $serviceAlias ? ' active' : null }}" href="/{{ $gameAlias }}/{{ $value['alias'] }}" >{{ $value['name'] }}</a>
             @endforeach
         </div>
     </nav>
@@ -35,13 +37,12 @@
             <div class="row">
                 <div class="col-10">
                     <form action="#" class="form-inline filter">
-
-                        @forelse($selects['category'] as $select)
+                        @forelse($category['selects'] as $value)
                             <div class="form-group">
-                                <select class="form-control" name="{{ $select['name'] }}">
-                                    <option selected disabled>{{ $select['placeholder'] }}</option>
-                                    @foreach($select['select'] as $value)
-                                        <option value="{{ $value['id'] }}">{{ $value['name'] }}</option>
+                                <select class="form-control" name="{{ $value['name'] }}">
+                                    <option selected disabled>{{ $value['placeholder'] }}</option>
+                                    @foreach($value['content'] as $item)
+                                        <option value="{{ $item['id'] }}">{{ $item['name'] }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -68,8 +69,8 @@
         <table>
             <thead>
                 <tr>
-                    @foreach($selects['category'] as $select)
-                    <th>{{ $select['placeholder'] }}</th>
+                    @foreach($category['selects'] as $value)
+                    <th>{{ $value['placeholder'] }}</th>
                     @endforeach
                     <th>Описание</th>
                     <th>Продавец</th>

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Service;
+use App\Category;
 
 class serviceTableSeeder extends Seeder
 {
@@ -13,28 +13,28 @@ class serviceTableSeeder extends Seeder
     public function run()
     {
         // Aion
-        Service::create([
+        Category::create([
             'name' => 'Кинары',
             'alias' => 'kinars',
             'description' => '',
             'game_id' => 1,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 1,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 1,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -42,35 +42,35 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Albion Online
-        Service::create([
+        Category::create([
             'name' => 'Серебро',
             'alias' => 'silver',
             'description' => '',
             'game_id' => 2,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 2,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 2,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 2,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -78,28 +78,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Archeage RU
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 3,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 3,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 3,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -107,28 +107,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Black Desert RU
-        Service::create([
+        Category::create([
             'name' => 'Серебро',
             'alias' => 'silver',
             'description' => '',
             'game_id' => 4,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 4,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 4,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -136,28 +136,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Blade & Soul RU
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 5,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 5,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 5,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -165,21 +165,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Clash of Clans
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 6,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 6,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -187,28 +187,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Crossout
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 7,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 7,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 7,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -216,21 +216,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // CS GO
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 8,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Скины',
             'alias' => 'skins',
             'description' => '',
             'game_id' => 8,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -238,14 +238,14 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Destiny 2
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 9,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -253,14 +253,14 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Diablo 3
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 10,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -268,21 +268,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Dota 2
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 11,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 11,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -290,28 +290,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Elder Scrolls Online
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 12,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 12,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 12,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -319,49 +319,49 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Escape from Tarkov
-        Service::create([
+        Category::create([
             'name' => 'Рубли',
             'alias' => 'rubles',
             'description' => '',
             'game_id' => 13,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Доллары',
             'alias' => 'dollars',
             'description' => '',
             'game_id' => 13,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Евро',
             'alias' => 'euro',
             'description' => '',
             'game_id' => 13,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Биткойны',
             'alias' => 'bitcoins',
             'description' => '',
             'game_id' => 13,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 13,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 13,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -369,28 +369,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // EVE Online
-        Service::create([
+        Category::create([
             'name' => 'ISK',
             'alias' => 'isk',
             'description' => '',
             'game_id' => 14,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 14,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 14,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -398,21 +398,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Fifa
-        Service::create([
+        Category::create([
             'name' => 'Монеты',
             'alias' => 'coins',
             'description' => '',
             'game_id' => 15,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 15,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -420,14 +420,14 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // GTA 5
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 16,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -435,28 +435,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // GTA SAMP, CRMP, RP
-        Service::create([
+        Category::create([
             'name' => 'Вирты',
             'alias' => 'virts',
             'description' => '',
             'game_id' => 17,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 17,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 17,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -464,28 +464,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Guild Wars 2
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 18,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 18,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 18,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -493,14 +493,14 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Gwent
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 19,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -508,14 +508,14 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Hearthstone
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 20,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -523,21 +523,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // League of Legends
-        Service::create([
+        Category::create([
             'name' => 'Riot Points',
             'alias' => 'riot-points',
             'description' => '',
             'game_id' => 21,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 21,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -545,7 +545,7 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Lineage 2 EU/NA
-        Service::create([
+        Category::create([
             'name' => 'Адена',
             'alias' => 'adena',
             'description' => '',
@@ -553,21 +553,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 22,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 22,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -575,28 +575,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Lineage 2 RU
-        Service::create([
+        Category::create([
             'name' => 'Адена',
             'alias' => 'adena',
             'description' => '',
             'game_id' => 23,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 23,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 23,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -604,35 +604,35 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Lineage 2 Free
-        Service::create([
+        Category::create([
             'name' => 'Адена',
             'alias' => 'adena',
             'description' => '',
             'game_id' => 24,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Монеты',
             'alias' => 'coins',
             'description' => '',
             'game_id' => 24,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 24,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 24,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -640,28 +640,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Neverwinter online
-        Service::create([
+        Category::create([
             'name' => 'Бриллианты',
             'alias' => 'diamonds',
             'description' => '',
             'game_id' => 25,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 25,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 25,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -669,21 +669,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Overwatch
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 26,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Скины',
             'alias' => 'skins',
             'description' => '',
             'game_id' => 26,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -691,49 +691,49 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Path of Exile
-        Service::create([
+        Category::create([
             'name' => 'Сферы возвышения',
             'alias' => 'spheres-of-elevation',
             'description' => '',
             'game_id' => 27,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Сферы хаоса',
             'alias' => 'spheres-of-chaos',
             'description' => '',
             'game_id' => 27,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Сферы прочие',
             'alias' => 'other-spheres',
             'description' => '',
             'game_id' => 27,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 27,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Билды',
             'alias' => 'builds',
             'description' => '',
             'game_id' => 27,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 27,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -741,28 +741,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Perfect World (RU)
-        Service::create([
+        Category::create([
             'name' => 'Юани',
             'alias' => 'yuan',
             'description' => '',
             'game_id' => 28,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 28,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 28,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -770,21 +770,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // PUBG
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 29,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 29,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -792,28 +792,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Revelation Online
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 30,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 30,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 30,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -821,21 +821,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Tom Clancy's Rainbow 6
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 31,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 31,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -843,21 +843,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // War Thunder
-        Service::create([
+        Category::create([
             'name' => 'GAIJIN COINS',
             'alias' => 'gaijin-coins',
             'description' => '',
             'game_id' => 32,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 32,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -865,21 +865,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Warface
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 33,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 33,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -887,28 +887,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Warframe
-        Service::create([
+        Category::create([
             'name' => 'Платина',
             'alias' => 'platinum',
             'description' => '',
             'game_id' => 34,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 34,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 34,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -916,21 +916,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // World of Tanks
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 35,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Бонус коды',
             'alias' => 'bonus-codes',
             'description' => '',
             'game_id' => 35,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -938,14 +938,14 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // World of Warships
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 36,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -953,28 +953,28 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // WOW FREE
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 37,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 37,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Предметы',
             'alias' => 'subjects',
             'description' => '',
             'game_id' => 37,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Услуги',
             'alias' => 'services',
             'description' => '',
@@ -982,63 +982,63 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // WOW RU/EU
-        Service::create([
+        Category::create([
             'name' => 'Золото',
             'alias' => 'gold',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Рейды',
             'alias' => 'raids',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Подземелья',
             'alias' => 'dungeons',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Прокачка',
             'alias' => 'pumping',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'PVP',
             'alias' => 'pvp',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Достижения',
             'alias' => 'achievements',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Маунты',
             'alias' => 'mounts',
             'description' => '',
             'game_id' => 38,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Прочее',
             'alias' => 'other',
             'description' => '',
@@ -1046,7 +1046,7 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Epic Games
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
@@ -1054,7 +1054,7 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Origin
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
@@ -1062,21 +1062,21 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Steam
-        Service::create([
+        Category::create([
             'name' => 'Пополнение баланса',
             'alias' => 'deposit',
             'description' => '',
             'game_id' => 41,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',
             'game_id' => 41,
         ]);
 
-        Service::create([
+        Category::create([
             'name' => 'Подарки',
             'alias' => 'gifts',
             'description' => '',
@@ -1084,7 +1084,7 @@ class serviceTableSeeder extends Seeder
         ]);
 
         // Uplay
-        Service::create([
+        Category::create([
             'name' => 'Аккаунты',
             'alias' => 'accounts',
             'description' => '',

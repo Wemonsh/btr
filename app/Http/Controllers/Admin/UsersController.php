@@ -15,6 +15,8 @@ class UsersController extends Controller
                 'users' => User::with('roles')->paginate(20)
             ];
 
+            dump($vars);
+
             return view('admin.users.index', $vars);
         } else {
             abort(404);

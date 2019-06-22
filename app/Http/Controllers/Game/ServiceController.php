@@ -4,39 +4,33 @@ namespace App\Http\Controllers\Game;
 
 use App\Game;
 use App\Order;
-use App\Service;
-use App\ServiceCategoryContent;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ServiceController extends Controller
 {
-    public function index($game, $service) {
+    public function index($gameAlias, $categoryAlias) {
+        // Информация об игре
+        $game = Game::with('categories')->where('alias', '=', $gameAlias)->first()->toArray();
+
+        // Услуги конректной игры
+        $category = Category::with(['selects' => function($query) {
+            $query->with('content');
+        }])->where('game_id','=', $game['id'])
+            ->where('alias', '=', $categoryAlias)->first()->toArray();
 
         $vars = [
-            'game' => $this->getGameFullInfo($game)->toArray(),
-            'gameAlias' => $game,
-            'serviceAlias' => $service,
+            'game' => $game,
+            'category' => $category,
+            'gameAlias' => $gameAlias,
+            'serviceAlias' => $categoryAlias,
         ];
-
-        $ser = Service::with('category')->where('alias', '=', $service)
-            ->where('game_id', '=', $vars['game']['id'])->first()->toArray();
-
-        foreach ($ser['category'] as $key => $category) {
-            $category_id = $category['pivot']['category_id'];
-            $ser['category'][$key]['select'] = ServiceCategoryContent::where('category_id', '=', $category_id)->get()->toArray();
-        }
-
-
-//        dump($vars);
-
-
-        $vars['selects'] = $ser;
 
 
         $orders = Order::with('game', 'service', 'seller', 'customer')
-            ->where('game_id','=', $vars['game']['id'])
-            ->where('service_id', '=', $vars['selects']['id'])
+            ->where('game_id','=', $game['id'])
+            ->where('service_id', '=', $category['id'])
             ->where('paid', '!=', 1)
 //            ->whereRaw('JSON_CONTAINS(properties->"$[*].name", \'"Aion server 2"\')')
             ->get();
@@ -49,7 +43,7 @@ class ServiceController extends Controller
 
         $vars['orders'] = $orders->toArray();
 
-        //dump($vars['orders']);
+        dump($vars);
 
         return view('games.template', $vars);
     }
