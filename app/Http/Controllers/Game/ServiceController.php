@@ -32,6 +32,7 @@ class ServiceController extends Controller
             ->where('game_id','=', $game['id'])
             ->where('service_id', '=', $category['id'])
             ->where('paid', '!=', 1)
+            ->where('customer_id', '=', null)
 //            ->whereRaw('JSON_CONTAINS(properties->"$[*].name", \'"Aion server 2"\')')
             ->get();
 

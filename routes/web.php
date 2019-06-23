@@ -16,10 +16,15 @@ Route::get('/', 'MainController@index');
 Auth::routes();
 
 Route::get('/home', 'MainController@index');
-Route::get('/profile', 'HomeController@index')->name('home');
+
+
+
 Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');
 
-
+Route::group(['prefix' => 'profile'], function() {
+    Route::match(['get', 'post'], '/', ['uses' => 'User\ProfileController@index', 'as' => 'profile']);
+    Route::match(['get', 'post'], '/chat/{id?}', ['uses' => 'User\ChatController@index', 'as' => 'chat']);
+});
 
 // Admin
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
@@ -83,5 +88,8 @@ Route::match(['get', 'post'], '/{game}/{service}/create', ['uses' => 'Game\Order
 
 Route::match(['get', 'post'], '/{game}/{service}/show/{id}', ['uses' => 'Game\OrderController@show', 'as' => 'orderShow']);
 
-Route::match(['get', 'post'], '/{game}/{service}/buy/{id}', ['uses' => 'Game\OrderController@buy', 'as' => 'orderBuy']);
+Route::match(['get', 'post'], '/{game}/{category}/buy/{id}', ['uses' => 'Game\OrderController@buy', 'as' => 'orderBuy']);
+
+
+
 

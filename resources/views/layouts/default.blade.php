@@ -47,11 +47,11 @@
                             <a class="nav-link" href="#">Мои заказы <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-comments"></i> Мои сообщения <span
+                            <a class="nav-link" href="{{ route('chat') }}"><i class="fas fa-comments"></i> Мои сообщения <span
                                         class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Семенов Олег <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ route('profile') }}">{{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><span class="button-exit">Выйти</span></a>

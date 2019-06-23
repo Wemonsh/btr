@@ -142,9 +142,6 @@
                 }
             </style>
 
-
-            <p>123</p>
-
             {{--@foreach($games as $game)--}}
                 {{--{{ print_r($game) }}--}}
             {{--@endforeach--}}

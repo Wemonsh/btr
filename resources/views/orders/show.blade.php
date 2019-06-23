@@ -6,6 +6,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-8">
+					@if(!empty($order->images))
 					<div class="images">
 						<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
@@ -33,6 +34,7 @@
 							</a>
 						</div>
 					</div>
+					@endif
 					<div class="description">
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item">
