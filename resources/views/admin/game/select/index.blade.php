@@ -1,6 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('content')
+    <a href="{{ route('gamesAdmin').'?game_id='.$game_id.'&category_id='.$category_id.'&action=create' }}">Добавить</a>
     <a href="{{ route('gamesAdmin').'?game_id='.$game_id}}">Назад</a>
     <table>
         <tbody>

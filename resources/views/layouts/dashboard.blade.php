@@ -87,37 +87,18 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-{{--        <li class="nav-item">--}}
-{{--            <a class="nav-link" href="{{ route('dashboard') }}">--}}
-{{--                <i class="fas fa-fw fa-tachometer-alt"></i>--}}
-{{--                <span>Dashboard</span>--}}
-{{--            </a>--}}
-{{--        </li>--}}
-{{--        <li class="nav-item">--}}
-{{--            <a class="nav-link" href="{{ route('usersIndex') }}">--}}
-{{--                <i class="fas fa-fw fa-table"></i>--}}
-{{--                <span>Пользователи</span></a>--}}
-{{--        </li>--}}
-{{--        <li class="nav-item">--}}
-{{--            <a class="nav-link" href="{{ route('gamesIndex') }}">--}}
-{{--                <i class="fas fa-fw fa-table"></i>--}}
-{{--                <span>Игры</span></a>--}}
-{{--        </li>--}}
-{{--        <li class="nav-item">--}}
-{{--            <a class="nav-link" href="{{ route('servicesIndex') }}">--}}
-{{--                <i class="fas fa-fw fa-table"></i>--}}
-{{--                <span>Услуги</span></a>--}}
-{{--        </li>--}}
-{{--        <li class="nav-item">--}}
-{{--            <a class="nav-link" href="{{ route('categoriesIndex') }}">--}}
-{{--                <i class="fas fa-fw fa-table"></i>--}}
-{{--                <span>Категории</span></a>--}}
-{{--        </li>--}}
-{{--        <li class="nav-item">--}}
-{{--            <a class="nav-link" href="{{ route('selectsIndex') }}">--}}
-{{--                <i class="fas fa-fw fa-table"></i>--}}
-{{--                <span>Селекты</span></a>--}}
-{{--        </li>--}}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('dashboard') }}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('gamesAdmin') }}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Игры</span>
+            </a>
+        </li>
     </ul>
 
     <div id="content-wrapper">
