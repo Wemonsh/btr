@@ -1,9 +1,9 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h1>Добавление новой игры</h1>
+    <h1>Добавление новой категории для игры "{{ $data->name }}"</h1>
     <hr>
-    <form method="post" action="{{ request()->url().'?action=create' }}" enctype="multipart/form-data">
+    <form method="post" action="{{ request()->url().'?game_id='.$game_id.'&action=create' }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="name">Название</label>
@@ -14,16 +14,11 @@
             <input name="alias" type="text" class="form-control" id="alias" placeholder="Alias">
         </div>
         <div class="form-group">
-            <label for="card_image">Card Image</label>
-            <input name="card_image" type="file" class="form-control-file" id="card_image">
+            <label for="description">Описание</label>
+            <textarea name="description" class="form-control" id="description" rows="12"></textarea>
         </div>
         <div class="form-group">
-            <label for="full_image">Full Image</label>
-            <input name="full_image" type="file" class="form-control-file" id="full_image">
-        </div>
-        <div class="form-group">
-            <label for="background">Background</label>
-            <input name="background" type="text" class="form-control" id="background" placeholder="Background">
+            <input value="{{ $data->name }}" name="game" type="text" class="form-control" id="game" placeholder="Game" disabled>
         </div>
         <button type="submit" class="btn btn-primary">Создать</button>
     </form>

@@ -1,9 +1,9 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <h1>Изменение игры</h1>
+    <h1>Редактирование игры "{{ $data->name }}"</h1>
     <hr>
-    <form method="post" action="#" enctype="multipart/form-data">
+    <form method="post" action="{{ request()->url().'?id='.$data->id.'&action=edit' }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="name">Название</label>

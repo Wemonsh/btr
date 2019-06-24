@@ -1,8 +1,9 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <a class="btn btn-primary mb-3" href="{{ request()->url().'?action=create' }}">Добавить</a>
-
+    <h1>Игры</h1>
+    <hr>
+    <a class="btn btn-primary mb-3" href="{{ request()->url().'?action=create' }}">Добавить игру</a>
     <table class="table table-bordered table-sm">
         <thead>
             <tr>
