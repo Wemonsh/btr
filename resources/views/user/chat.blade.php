@@ -1,6 +1,13 @@
 @extends('layouts.default')
 
 @section('content')
+
+   <div id="app">
+
+
+
+
+
 <section id="chat">
     <div class="container">
         <div class="row">
@@ -15,35 +22,19 @@
                 </div>
             </div>
             <div class="col-9">
+                @if($id != null)
                 <div class="information">
                     <p>Покупатель Semen Semenich оплатил заказ #1234 Aion,продажа аккаунта, стоимость 600₽
                     </p>
                     <p>Скоро с вами свяжется продавец. Не забудьте после выполнения всех договоренностей
                         продавца подтвердить завершения сделки в Мои заказы.</p>
                 </div>
-                <div class="messages">
-                    <div class="message">
-                        <img src="/img/avatar.png" alt="">
-                        <p><a href="#">Wemonsh</a> <span class="date">20:00</span></p>
-                        <p class="text">Привет как дела</p>
-                    </div>
-                    <div class="message">
-                        <img src="/img/avatar.png" alt="">
-                        <p><a href="#">Wemonsh</a> <span class="date">20:00</span></p>
-                        <p class="text">Привет как дела</p>
-                    </div>
-                    <div class="message">
-                        <img src="/img/avatar.png" alt="">
-                        <p><a href="#">Wemonsh</a> <span class="date">20:00</span></p>
-                        <p class="text">Привет как дела</p>
-                    </div>
-                    <form action="#">
-                        <textarea name="" placeholder="Написать сообщение …"></textarea>
-                        <button type="submit">Отправить</button>
-                    </form>
-                </div>
+
+                <chats :user="{{ auth()->user() }}" :order="{{ $id }}"></chats>
+                @endif
             </div>
         </div>
     </div>
 </section>
+</div>
 @endsection

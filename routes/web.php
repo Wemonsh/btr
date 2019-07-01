@@ -11,7 +11,13 @@
 |
 */
 
-Route::get('/', 'MainController@index');
+//Route::get('/', 'MainController@index');
+use App\Events\WebsocketEvent;
+
+Route::get('/', function () {
+    broadcast(new WebsocketEvent('some data'));
+    return App\Http\Controllers\MainController::index();
+});
 
 Auth::routes();
 
@@ -24,6 +30,9 @@ Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');
 Route::group(['prefix' => 'profile'], function() {
     Route::match(['get', 'post'], '/', ['uses' => 'User\ProfileController@index', 'as' => 'profile']);
     Route::match(['get', 'post'], '/chat/{id?}', ['uses' => 'User\ChatController@index', 'as' => 'chat']);
+
+    Route::get('/messages', 'User\ChatController@fetchMessages');
+    Route::post('/messages', 'User\ChatController@sendMessage');
 });
 
 // Admin
@@ -38,11 +47,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
 
 
     // Users
-//    Route::match(['get', 'post'], '/users' ,['uses' => 'Admin\UsersController@index', 'as' => 'usersIndex']);
-//    Route::match(['get', 'post'], '/users/edit/{id}' ,['uses' => 'Admin\UsersController@edit', 'as' => 'usersEdit']);
-//    Route::match(['get', 'post'], '/users/delete/{id}', ['uses' => 'Admin\UsersController@delete', 'as' => 'usersDelete']);
-//
-//    Route::match(['get', 'post'], '/users/deleted' ,['uses' => 'Admin\UsersController@deleted', 'as' => 'usersDeleted']);
+    Route::match(['get', 'post'], '/users' ,['uses' => 'Admin\UsersController@index', 'as' => 'usersIndex']);
+    Route::match(['get', 'post'], '/users/edit/{id}' ,['uses' => 'Admin\UsersController@edit', 'as' => 'usersEdit']);
+    Route::match(['get', 'post'], '/users/delete/{id}', ['uses' => 'Admin\UsersController@delete', 'as' => 'usersDelete']);
+
+    Route::match(['get', 'post'], '/users/deleted' ,['uses' => 'Admin\UsersController@deleted', 'as' => 'usersDeleted']);
 
 //    // Games
 //    Route::match(['get', 'post'], '/games' ,['uses' => 'Admin\GamesController@index', 'as' => 'gamesIndex']);

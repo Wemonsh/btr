@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Events\WebsocketEvent;
 use App\Select;
 use Illuminate\Http\Request;
 use App\Game;
 
 class MainController extends Controller
 {
-    public function index() {
-
+    public static function index() {
         $games = Game::with('categories')->get()->toArray();
 
         $vars = [

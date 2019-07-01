@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta charset="utf-8">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,7 +26,10 @@
         <div class="col-9">
 
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="{{ url('/home') }}">Navbar</a>
+                <a class="navbar-brand" href="{{ url('/home') }}">
+                    <img src="/img/logo.svg" height="35" alt="">
+                </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -328,7 +333,7 @@
 
         </div>
         <div class="col-3 sidebar">
-            <div class="chat">
+            <div id="app" class="chat">
                 <h2>Общий чат</h2>
                 <div class="messages">
                     <div class="message">
@@ -443,5 +448,8 @@
         variableWidth: true
     });
 </script>
+
+<script src="js/app.js"></script>
+
 </body>
 </html>

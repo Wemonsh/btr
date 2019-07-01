@@ -18,13 +18,11 @@ class CreateMessagesTable extends Migration
 
             $table->bigInteger('order_id')->unsigned();
             $table->foreign('order_id')->references('id')->on('orders');
-            $table->bigInteger('sender_id')->unsigned();
-            $table->foreign('sender_id')->references('id')->on('users');
-            $table->bigInteger('recipient_id')->unsigned()->nullable();
-            $table->foreign('recipient_id')->references('id')->on('users');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->boolean('read')->default('0');
-            $table->string('text');
+            $table->string('message');
             $table->timestamps();
         });
     }

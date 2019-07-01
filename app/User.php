@@ -46,4 +46,8 @@ class User extends Authenticatable
     {
         return (boolean)$this->roles->where('name', 'admin')->count();
     }
+
+    public function messages() {
+        return $this->hasMany(Message::class);
+    }
 }
