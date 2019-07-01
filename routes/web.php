@@ -35,16 +35,19 @@ Route::group(['prefix' => 'profile'], function() {
     Route::post('/messages', 'User\ChatController@sendMessage');
 });
 
+// Faq
+Route::get('/faq', 'Faq\FaqController@index');
+
 // Admin
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::match(['get', 'post'], '/', ['uses' => 'Admin\MainController@index', 'as' => 'dashboard']);
 
 
-
+    // Games
     Route::match(['get', 'post'], '/games', ['uses' => 'Admin\Game\MainController@index', 'as' => 'gamesAdmin']);
 
-
-
+    // Faq
+    Route::match(['get', 'post'], '/faq', ['uses' => 'Admin\Faq\MainController@index', 'as' => 'faqAdmin']);
 
     // Users
     Route::match(['get', 'post'], '/users' ,['uses' => 'Admin\UsersController@index', 'as' => 'usersIndex']);

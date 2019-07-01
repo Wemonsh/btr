@@ -99,6 +99,18 @@
                 <span>Игры</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('faqAdmin') }}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>ЧАВО</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Удаленные</span>
+            </a>
+        </li>
     </ul>
 
     <div id="content-wrapper">

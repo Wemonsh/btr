@@ -43,7 +43,7 @@
                             <a class="nav-link" href="#">Правила сервиса <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Помощь <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ url('/faq') }}">Помощь <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Отзывы <span class="sr-only">(current)</span></a>
