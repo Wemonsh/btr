@@ -15,12 +15,11 @@ class Category extends Model
     use SoftDeletes;
 
     public function game(){
-        return $this->hasOne('App\Game','id','game_id');
+        return $this->hasOne('App\Game','id','game_id')->withTrashed();
     }
 
     public function selects()
     {
         return $this->belongsToMany(Select::class);
     }
-
 }

@@ -1,5 +1,15 @@
 @extends('layouts.dashboard')
 
+@section('breadcrumbs')
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Главная</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Добавление новой категории ЧАВО</li>
+        </ol>
+    </nav>
+@endsection
+
 @section('content')
     <h1>Добавление новой категории ЧАВО</h1>
     <hr>

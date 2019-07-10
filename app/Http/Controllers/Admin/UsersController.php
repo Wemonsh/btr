@@ -10,13 +10,9 @@ class UsersController extends Controller
 {
     public function index() {
         if (view()->exists('admin.users.index')) {
-
             $vars = [
                 'users' => User::with('roles')->paginate(20)
             ];
-
-            dump($vars);
-
             return view('admin.users.index', $vars);
         } else {
             abort(404);
@@ -26,14 +22,18 @@ class UsersController extends Controller
     public function edit(Request $request, $id) {
         if (view()->exists('admin.users.edit')) {
             if ($request->isMethod('post')) {
-
                 $user = User::where('id','=', $id)->first();
-
+                $photo = null;
+                if ($request->file('photo') != null) {
+                    $photo = $request->file('photo')->store('/avatars', 'public');
+                } else {
+                    // Стандартная картинка
+                }
                 $user->name = $request->input('name');
                 $user->email = $request->input('email');
-
+                $user->photo = $photo;
+                $user->balance = $request->input('balance');
                 $user->save();
-
                 return redirect('/admin/users');
             } else {
                 $user = User::where('id','=', $id)->first();
@@ -57,27 +57,24 @@ class UsersController extends Controller
         if ($id != null) {
             User::find($id)->delete();
         }
-
         return redirect('/admin/users');
     }
 
-    public function recover($id) {
-        if ($id != null) {
-            User::onlyTrashed()->find($id)->restore();
-        }
-
-        return redirect('/admin/users');
-    }
-
-    public function deleted() {
-        if (view()->exists('admin.users.deleted')) {
-
-            $vars = [
-                'users' => User::onlyTrashed()->paginate(20)
-            ];
-            return view('admin.users.deleted', $vars);
-        } else {
-            abort(404);
-        }
-    }
+//    public function recover($id) {
+//        if ($id != null) {
+//            User::onlyTrashed()->find($id)->restore();
+//        }
+//        return redirect('/admin/users');
+//    }
+//
+//    public function deleted() {
+//        if (view()->exists('admin.users.deleted')) {
+//            $vars = [
+//                'users' => User::onlyTrashed()->paginate(20)
+//            ];
+//            return view('admin.users.deleted', $vars);
+//        } else {
+//            abort(404);
+//        }
+//    }
 }

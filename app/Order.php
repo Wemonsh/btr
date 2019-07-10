@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Order extends Model
 {
@@ -11,9 +12,12 @@ class Order extends Model
     protected $fillable = ['description', 'properties', 'cost', 'images', 'game_id', 'service_id', 'seller_id', 'customer_id', 'paid'];
     public $timestamps = true;
 
+    use SoftDeletes;
+
     public function game () {
         return $this->hasOne('App\Game','id','game_id');
     }
+
     public function service () {
         return $this->hasOne('App\Category','id','service_id');
     }

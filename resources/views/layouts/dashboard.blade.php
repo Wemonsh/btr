@@ -94,6 +94,18 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('usersAdmin') }}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Пользователи</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('ordersAdmin') }}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Заказы</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('gamesAdmin') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Игры</span>
@@ -106,10 +118,31 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('sliderAdmin') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Удаленные</span>
+                <span>Слайдер</span>
             </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-headset"></i>
+            <span>Удаленные</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{ route('usersDeleted') }}">Пользователи</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ route('ordersDeleted') }}">Заказы</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ route('gamesDeleted') }}">Игры</a>
+            <a class="dropdown-item" href="{{ route('gamesCategoriesDeleted') }}">Категории</a>
+            <a class="dropdown-item" href="{{ route('selectsDeleted') }}">Селекты</a>
+            <a class="dropdown-item" href="{{ route('contentDeleted') }}">Контент</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ route('faqDeleted') }}">Чаво</a>
+            <a class="dropdown-item" href="{{ route('faqCategoriesDeleted') }}">Категории</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ route('sliderDeleted') }}">Слайдер</a>
+        </div>
         </li>
     </ul>
 

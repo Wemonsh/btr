@@ -34,6 +34,7 @@ class CreateOrdersTable extends Migration
 
             $table->boolean('paid')->default(0);
 
+            $table->softDeletes();
             $table->timestamps();
         });
     }

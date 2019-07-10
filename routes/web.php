@@ -42,6 +42,16 @@ Route::get('/faq', 'Faq\FaqController@index');
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::match(['get', 'post'], '/', ['uses' => 'Admin\MainController@index', 'as' => 'dashboard']);
 
+    // Users
+    Route::match(['get', 'post'], '/users' ,['uses' => 'Admin\UsersController@index', 'as' => 'usersAdmin']);
+    Route::match(['get', 'post'], '/users/edit/{id}' ,['uses' => 'Admin\UsersController@edit', 'as' => 'usersEdit']);
+    Route::match(['get', 'post'], '/users/delete/{id}', ['uses' => 'Admin\UsersController@delete', 'as' => 'usersDelete']);
+
+    // Orders
+    Route::match(['get', 'post'], '/orders' ,['uses' => 'Admin\Order\MainController@index', 'as' => 'ordersAdmin']);
+    Route::match(['get', 'post'], '/orders/create' ,['uses' => 'Admin\Order\MainController@create', 'as' => 'ordersCreate']);
+    Route::match(['get', 'post'], '/orders/edit/{id}' ,['uses' => 'Admin\Order\MainController@edit', 'as' => 'ordersEdit']);
+    Route::match(['get', 'post'], '/orders/delete/{id}', ['uses' => 'Admin\Order\MainController@delete', 'as' => 'ordersDelete']);
 
     // Games
     Route::match(['get', 'post'], '/games', ['uses' => 'Admin\Game\MainController@index', 'as' => 'gamesAdmin']);
@@ -49,12 +59,57 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     // Faq
     Route::match(['get', 'post'], '/faq', ['uses' => 'Admin\Faq\MainController@index', 'as' => 'faqAdmin']);
 
-    // Users
-    Route::match(['get', 'post'], '/users' ,['uses' => 'Admin\UsersController@index', 'as' => 'usersIndex']);
-    Route::match(['get', 'post'], '/users/edit/{id}' ,['uses' => 'Admin\UsersController@edit', 'as' => 'usersEdit']);
-    Route::match(['get', 'post'], '/users/delete/{id}', ['uses' => 'Admin\UsersController@delete', 'as' => 'usersDelete']);
+    // Trashed
+    Route::group(['prefix' => 'trashed', 'middleware' => 'admin'], function () {
+        // Users
+        Route::match(['get', 'post'], '/users', ['uses' => 'Admin\Trashed\UsersController@index', 'as' => 'usersDeleted']);
+        Route::match(['get', 'post'], '/users/recover/{id}', ['uses' => 'Admin\Trashed\UsersController@recover', 'as' => 'usersRecover']);
 
-    Route::match(['get', 'post'], '/users/deleted' ,['uses' => 'Admin\UsersController@deleted', 'as' => 'usersDeleted']);
+        // Orders
+        Route::match(['get', 'post'], '/orders', ['uses' => 'Admin\Trashed\OrdersController@index', 'as' => 'ordersDeleted']);
+        Route::match(['get', 'post'], '/orders/recover/{id}', ['uses' => 'Admin\Trashed\OrdersController@recover', 'as' => 'ordersRecover']);
+
+        // Games
+        Route::match(['get', 'post'], '/games', ['uses' => 'Admin\Trashed\GamesController@index', 'as' => 'gamesDeleted']);
+        Route::match(['get', 'post'], '/games/recover/{id}', ['uses' => 'Admin\Trashed\GamesController@recover', 'as' => 'gamesRecover']);
+
+        // Games Categories
+        Route::match(['get', 'post'], '/games-categories', ['uses' => 'Admin\Trashed\GamesCategoriesController@index', 'as' => 'gamesCategoriesDeleted']);
+        Route::match(['get', 'post'], '/games-categories/recover/{id}', ['uses' => 'Admin\Trashed\GamesCategoriesController@recover', 'as' => 'gamesCategoriesRecover']);
+
+        // Games Selects
+        Route::match(['get', 'post'], '/games-selects', ['uses' => 'Admin\Trashed\GamesSelectsController@index', 'as' => 'selectsDeleted']);
+        Route::match(['get', 'post'], '/games-selects/recover/{id}', ['uses' => 'Admin\Trashed\GamesSelectsController@recover', 'as' => 'selectsRecover']);
+
+        // Games Content
+        Route::match(['get', 'post'], '/games-content', ['uses' => 'Admin\Trashed\GamesContentController@index', 'as' => 'contentDeleted']);
+        Route::match(['get', 'post'], '/games-content/recover/{id}', ['uses' => 'Admin\Trashed\GamesContentController@recover', 'as' => 'contentRecover']);
+
+        // Faq
+        Route::match(['get', 'post'], '/faq', ['uses' => 'Admin\Trashed\FaqController@index', 'as' => 'faqDeleted']);
+        Route::match(['get', 'post'], '/faq/recover/{id}', ['uses' => 'Admin\Trashed\FaqController@recover', 'as' => 'faqRecover']);
+
+        // Faq Categories
+        Route::match(['get', 'post'], '/faq-categories', ['uses' => 'Admin\Trashed\FaqCategoriesController@index', 'as' => 'faqCategoriesDeleted']);
+        Route::match(['get', 'post'], '/faq-categories/recover/{id}', ['uses' => 'Admin\Trashed\FaqCategoriesController@recover', 'as' => 'faqCategoriesRecover']);
+
+        // Slider
+        Route::match(['get', 'post'], '/slider', ['uses' => 'Admin\Trashed\SliderController@index', 'as' => 'sliderDeleted']);
+        Route::match(['get', 'post'], '/slider/recover/{id}', ['uses' => 'Admin\Trashed\SliderController@recover', 'as' => 'sliderRecover']);
+    });
+
+    // Slider
+    Route::match(['get', 'post'], '/slider' ,['uses' => 'Admin\Slider\MainController@index', 'as' => 'sliderAdmin']);
+    Route::match(['get', 'post'], '/slider/create' ,['uses' => 'Admin\Slider\MainController@create', 'as' => 'sliderCreate']);
+    Route::match(['get', 'post'], '/slider/edit/{id}' ,['uses' => 'Admin\Slider\MainController@edit', 'as' => 'sliderEdit']);
+    Route::match(['get', 'post'], '/slider/delete/{id}', ['uses' => 'Admin\Slider\MainController@delete', 'as' => 'sliderDelete']);
+
+    // Users
+//    Route::match(['get', 'post'], '/users' ,['uses' => 'Admin\UsersController@index', 'as' => 'usersIndex']);
+//    Route::match(['get', 'post'], '/users/edit/{id}' ,['uses' => 'Admin\UsersController@edit', 'as' => 'usersEdit']);
+//    Route::match(['get', 'post'], '/users/delete/{id}', ['uses' => 'Admin\UsersController@delete', 'as' => 'usersDelete']);
+//
+//    Route::match(['get', 'post'], '/users/deleted' ,['uses' => 'Admin\UsersController@deleted', 'as' => 'usersDeleted']);
 
 //    // Games
 //    Route::match(['get', 'post'], '/games' ,['uses' => 'Admin\GamesController@index', 'as' => 'gamesIndex']);

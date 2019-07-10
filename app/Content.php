@@ -18,4 +18,8 @@ class Content extends Model
     {
         return $this->hasOne('App\Select', 'id', 'select_id');
     }
+
+    public function selectTrashed() {
+        return $this->hasOne('App\Select', 'id', 'select_id')->onlyTrashed();
+    }
 }

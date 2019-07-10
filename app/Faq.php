@@ -16,6 +16,6 @@ class Faq extends Model
     protected $fillable = ['question', 'answer', 'id_category'];
 
     public function faqCategory(){
-        return $this->hasOne('App\FaqCategory','id','id_category');
+        return $this->hasOne('App\FaqCategory','id','id_category')->withTrashed();
     }
 }
