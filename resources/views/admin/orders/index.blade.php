@@ -38,7 +38,9 @@
         <tbody>
         @foreach($orders as $order)
             <tr>
-                <td class="align-middle text-center">{{ $order->id }}</td>
+                <td class="align-middle text-center">
+                    <a href="{{ route('ordersShow', $order->id) }}" title="{{ $order->id }}">{{ $order->id }}</a>
+                </td>
                 <td class="align-middle text-center">{{ $order->description }}</td>
                 <td class="align-middle text-center">{{ $order->properties }}</td>
                 <td class="align-middle text-center">{{ $order->cost }}</td>

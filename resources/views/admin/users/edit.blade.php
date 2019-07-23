@@ -24,6 +24,58 @@
             <hr>
         </div>
         <div class="form-group">
+{{--            @foreach($roles as $value)--}}
+{{--                @foreach($user->roles as $item)--}}
+{{--                @if($item->id == $value->id)--}}
+{{--                    <div class="form-check">--}}
+{{--                        <label class="form-check-label">--}}
+{{--                            <input id="role" name="role[]" type="checkbox" class="form-check-input" value="{{ $value->id }}" checked>{{ $value->name }}--}}
+{{--                        </label>--}}
+{{--                    </div>--}}
+{{--                    @else--}}
+{{--                        <div class="form-check">--}}
+{{--                            <label class="form-check-label">--}}
+{{--                                <input id="role" name="role[]" type="checkbox" class="form-check-input" value="{{ $value->id }}">{{ $value->name }}--}}
+{{--                            </label>--}}
+{{--                        </div>--}}
+{{--                @endif--}}
+{{--                @endforeach--}}
+{{--            @endforeach--}}
+{{--            @if($user_roles == 0)--}}
+{{--                    @foreach($roles as $value)--}}
+{{--                        <div class="form-check">--}}
+{{--                            <label class="form-check-label">--}}
+{{--                                <input id="role" name="role[]" type="checkbox" class="form-check-input" value="{{ $value->id }}">{{ $value->name }}--}}
+{{--                            </label>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--            @endif--}}
+            @foreach($roles as $value)
+                    @if($user->hasRole($value->name))
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="role" name="role[]" type="checkbox" class="form-check-input" value="{{ $value->id }}" checked>{{ $value->name }}
+                            </label>
+                        </div>
+                    @else
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="role" name="role[]" type="checkbox" class="form-check-input" value="{{ $value->id }}">{{ $value->name }}
+                            </label>
+                        </div>
+                    @endif
+                @endforeach
+            @if($user_roles == 0)
+                @foreach($roles as $value)
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input id="role" name="role[]" type="checkbox" class="form-check-input" value="{{ $value->id }}">{{ $value->name }}
+                        </label>
+                    </div>
+                @endforeach
+            @endif
+        </div>
+        <div class="form-group">
             <label for="balance">Баланс</label>
             <input name="balance" type="number" class="form-control" id="balance" placeholder="Баланс" value="{{ $user->balance }}">
         </div>

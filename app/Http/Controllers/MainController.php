@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Events\WebsocketEvent;
 use App\Select;
+use App\Slider;
 use Illuminate\Http\Request;
 use App\Game;
 
@@ -14,9 +15,10 @@ class MainController extends Controller
         $games = Game::with('categories')->get()->toArray();
 
         $vars = [
-            'games' => $games
+            'games' => $games,
+            'slider' => Slider::inRandomOrder()->take(3)->get()->toArray(),
+            'counter' => 0,
         ];
-
         return view('welcome', $vars);
     }
 }

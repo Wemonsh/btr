@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Iatstuti\Database\Support\CascadeSoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -12,7 +13,9 @@ class Category extends Model
     protected $fillable = ['name', 'alias', 'description', 'game_id'];
     public $timestamps = false;
 
-    use SoftDeletes;
+    use SoftDeletes, CascadeSoftDeletes;
+
+    protected $cascadeDeletes = ['selects'];
 
     public function game(){
         return $this->hasOne('App\Game','id','game_id')->withTrashed();

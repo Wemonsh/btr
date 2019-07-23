@@ -21,7 +21,9 @@ class GamesSelectsController extends Controller
 
     public function recover($id) {
         if ($id != null) {
-            Select::onlyTrashed()->find($id)->restore();
+            Select::with(['content'=>function($query){
+                $query->restore();
+            }])->onlyTrashed()->find($id)->restore();
         }
         return redirect('/admin/trashed/games-selects');
     }

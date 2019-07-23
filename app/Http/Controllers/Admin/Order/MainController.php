@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Order;
 
+use App\Message;
 use App\Order;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -113,5 +114,18 @@ class MainController extends Controller
             Order::find($id)->delete();
         }
         return redirect('/admin/orders');
+    }
+
+    public function show(Request $request, $id) {
+        if (view()->exists('admin.orders.show')) {
+            $vars = [
+                'order' => Order::with('game', 'service', 'seller', 'customer')->where('id','=', $id)->first(),
+                'id' => $id,
+                'messages' => Message::where('order_id', '=', $id)->get(),
+            ];
+            return view('admin.orders.show', $vars);
+        } else {
+            abort(404);
+        }
     }
 }

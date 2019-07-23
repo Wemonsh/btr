@@ -52,5 +52,12 @@ class User extends Authenticatable
         return $this->hasMany(Message::class);
     }
 
+    public function hasRole($check)
+    {
+        return in_array($check, array_pluck($this->roles->toArray(), 'name'));
+        // начиная с версии 5.1 метода array_fetch не существует
+        //return in_array($check, array_fetch($this->roles->toArray(), 'name'));
+    }
+
     use SoftDeletes;
 }

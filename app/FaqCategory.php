@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Iatstuti\Database\Support\CascadeSoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -13,9 +14,11 @@ class FaqCategory extends Model
 
     protected $fillable = ['name'];
 
-    use SoftDeletes;
+    use SoftDeletes, CascadeSoftDeletes;
+
+    protected $cascadeDeletes = ['faqs'];
 
     public function faqs() {
-        return $this->hasMany('App\Faq');
+        return $this->hasMany('App\Faq', 'id_category','id')->withTrashed();
     }
 }

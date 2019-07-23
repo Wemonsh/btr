@@ -37,7 +37,7 @@
                         <a class="nav-link" href="#">Правила сервиса <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Помощь <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="faq">Помощь <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Отзывы <span class="sr-only">(current)</span></a>
@@ -80,44 +80,46 @@
         </div>
     </nav>
 
-
-
-
     <main>
         <section id="main">
 
             <div class="content">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        @foreach($slider as $item)
+                            @if(head($slider) == $item)
+                                <li data-target="#carouselExampleIndicators" data-slide-to="{{ $counter++ }}" class="active"></li>
+                            @else
+                                <li data-target="#carouselExampleIndicators" data-slide-to="{{ $counter++ }}"></li>
+                            @endif
+                        @endforeach
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/img/carousel/wow.png" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Покупайте у игроков</h1>
-                                <p>Площадка для покупки и продажи игровой атрибутики,<br> аккаунтов и услуг</p>
-                                <a href="#" class="button">Создать аккаунт</a>
+                    @foreach($slider as $value)
+                        @if(head($slider) == $value)
+                            <div class="carousel-item active">
+                                <img src="storage/{{ $value['image'] }}" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>{{ $value['headline'] }}</h1>
+                                    <p>{{ $value['description'] }}</p>
+                                    @if($value['button_exists'] != 0)
+                                    <a href="{{ $value['link'] }}" class="button">{{ $value['button_text'] }}</a>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/img/carousel/wow.png" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Покупайте у игроков</h1>
-                                <p>Площадка для покупки и продажи игровой атрибутики,<br> аккаунтов и услуг</p>
-                                <a href="#" class="button">Создать аккаунт</a>
+                        @else
+                            <div class="carousel-item">
+                                <img src="storage/{{ $value['image'] }}" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h1>{{ $value['headline'] }}</h1>
+                                    <p>{{ $value['description'] }}</p>
+                                    @if($value['button_exists'] != 0)
+                                        <a href="{{ $value['link'] }}" class="button">{{ $value['button_text'] }}</a>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/img/carousel/wow.png" class="d-block w-100">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h1>Покупайте у игроков</h1>
-                                <p>Площадка для покупки и продажи игровой атрибутики,<br> аккаунтов и услуг</p>
-                                <a href="#" class="button">Создать аккаунт</a>
-                            </div>
-                        </div>
+                        @endif
+                    @endforeach
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                        data-slide="prev">

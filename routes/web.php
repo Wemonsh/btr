@@ -51,8 +51,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
     Route::match(['get', 'post'], '/users/edit/{id}' ,['uses' => 'Admin\UsersController@edit', 'as' => 'usersEdit']);
     Route::match(['get', 'post'], '/users/delete/{id}', ['uses' => 'Admin\UsersController@delete', 'as' => 'usersDelete']);
 
+    // Roles
+    Route::match(['get', 'post'], '/roles' ,['uses' => 'Admin\Roles\MainController@index', 'as' => 'rolesAdmin']);
+    Route::match(['get', 'post'], '/roles/create' ,['uses' => 'Admin\Roles\MainController@create', 'as' => 'rolesCreate']);
+    Route::match(['get', 'post'], '/roles/edit/{id}' ,['uses' => 'Admin\Roles\MainController@edit', 'as' => 'rolesEdit']);
+    Route::match(['get', 'post'], '/roles/delete/{id}', ['uses' => 'Admin\Roles\MainController@delete', 'as' => 'rolesDelete']);
+
     // Orders
     Route::match(['get', 'post'], '/orders' ,['uses' => 'Admin\Order\MainController@index', 'as' => 'ordersAdmin']);
+    Route::match(['get', 'post'], '/orders/show/{id}', ['uses' => 'Admin\Order\MainController@show', 'as' => 'ordersShow']);
     Route::match(['get', 'post'], '/orders/create' ,['uses' => 'Admin\Order\MainController@create', 'as' => 'ordersCreate']);
     Route::match(['get', 'post'], '/orders/edit/{id}' ,['uses' => 'Admin\Order\MainController@edit', 'as' => 'ordersEdit']);
     Route::match(['get', 'post'], '/orders/delete/{id}', ['uses' => 'Admin\Order\MainController@delete', 'as' => 'ordersDelete']);
@@ -68,6 +75,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
         // Users
         Route::match(['get', 'post'], '/users', ['uses' => 'Admin\Trashed\UsersController@index', 'as' => 'usersDeleted']);
         Route::match(['get', 'post'], '/users/recover/{id}', ['uses' => 'Admin\Trashed\UsersController@recover', 'as' => 'usersRecover']);
+
+        // Roles
+        Route::match(['get', 'post'], '/roles', ['uses' => 'Admin\Trashed\RolesController@index', 'as' => 'rolesDeleted']);
+        Route::match(['get', 'post'], '/roles/recover/{id}', ['uses' => 'Admin\Trashed\RolesController@recover', 'as' => 'rolesRecover']);
 
         // Orders
         Route::match(['get', 'post'], '/orders', ['uses' => 'Admin\Trashed\OrdersController@index', 'as' => 'ordersDeleted']);

@@ -21,7 +21,9 @@ class FaqCategoriesController extends Controller
 
     public function recover($id) {
         if ($id != null) {
-            FaqCategory::onlyTrashed()->find($id)->restore();
+            FaqCategory::with(['faqs'=>function($query){
+                $query->restore();
+            }])->onlyTrashed()->find($id)->restore();
         }
         return redirect('/admin/trashed/faq-categories');
     }

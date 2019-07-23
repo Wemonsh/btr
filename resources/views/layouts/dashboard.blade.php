@@ -94,6 +94,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('rolesAdmin') }}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Роли</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('usersAdmin') }}">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Пользователи</span>
@@ -129,6 +135,7 @@
             <span>Удаленные</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{ route('rolesDeleted') }}">Роли</a>
             <a class="dropdown-item" href="{{ route('usersDeleted') }}">Пользователи</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ route('ordersDeleted') }}">Заказы</a>

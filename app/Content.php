@@ -16,7 +16,7 @@ class Content extends Model
 
     public function select()
     {
-        return $this->hasOne('App\Select', 'id', 'select_id');
+        return $this->hasOne('App\Select', 'id', 'select_id')->withTrashed();
     }
 
     public function selectTrashed() {
