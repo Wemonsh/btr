@@ -25,6 +25,9 @@ Route::get('logout', 'Auth\LoginController@logout', function () {
     return abort(404);
 });
 
+Route::get('/verify/{token}', 'Auth\RegisterController@verify')->name('register.verify');
+
+
 Route::get('/home', 'MainController@index');
 
 
