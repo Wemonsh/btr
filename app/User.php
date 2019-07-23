@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Cache;
 
 class User extends Authenticatable
 {
@@ -61,6 +62,11 @@ class User extends Authenticatable
         return in_array($check, array_pluck($this->roles->toArray(), 'name'));
         // начиная с версии 5.1 метода array_fetch не существует
         //return in_array($check, array_fetch($this->roles->toArray(), 'name'));
+    }
+
+    public function isOnline()
+    {
+        return Cache::has('user-is-online-' . $this->id);
     }
 
     use SoftDeletes;

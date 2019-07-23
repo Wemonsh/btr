@@ -67,7 +67,7 @@
 							@foreach(json_decode($order->properties) as $file)
 								<li>{{ $file->placeholder }}: {{ $file->name }}</li>
 							@endforeach
-							<li>Продавец: {{ $order->seller->name }}</li>
+							<li>Продавец: {{ $order->seller->name }} {{ $order->seller->isOnline() }}</li>
 						</ul>
 						<p class="cost">К оплате: <strong>{{ $order->cost }} &#8381;</strong></p>
 						<a href="{{ route('orderBuy', [$gameAlias, $serviceAlias, $order['id']]) }}" class="btn-payment">Оплатить</a>
