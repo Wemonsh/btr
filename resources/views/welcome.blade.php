@@ -68,7 +68,7 @@
                                             class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/profile">{{ Auth::user()->name }} <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"><span class="button-exit">Выйти</span></a>
@@ -443,7 +443,6 @@
 
 <script src="js/libs.min.js"></script>
 <script src="js/common.js"></script>
-
 
 </body>
 

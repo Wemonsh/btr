@@ -90,43 +90,10 @@ class OrderController extends Controller
         }
     }
 
-    public function edit(Request $request, $id, $gameAlias, $categoryAlias) {
+    public function edit(Request $request, $gameAlias, $categoryAlias, $id) {
         if (view()->exists('orders.edit')) {
-            if ($request->isMethod('post')) {
-                $order = Order::where('id','=', $id)->first();
-                $order->description = $request->input('description');
-                $order->cost = $request->input('cost');
-                $order->save();
-                return redirect('/show/'.$id);
-            } else {
-
-                // Информация об игре
-                $game = Game::with('categories')->where('alias', '=', $gameAlias)->first()->toArray();
-
-                // Услуги конректной игры
-                $category = Category::with(['selects' => function($query) {
-                    $query->with('content');
-                }])->where('game_id','=', $game['id'])
-                    ->where('alias', '=', $categoryAlias)->first()->toArray();
-
-                $order = Order::where('id', '=', $id)->first();
-                dump($order);
-
-                if ($order != null) {
-                    $vars = [
-                        'order' => $order,
-                        'id' => $id,
-                        'gameAlias' => $gameAlias,
-                        'serviceAlias' => $categoryAlias,
-                        'game' => $game,
-                        'category' => $category
-                    ];
-                    return view('orders.edit', $vars);
-                } else {
-                    abort(404);
-                }
-            }
-            return view('orders.edit');
+           $order = Order::where('id', '=', $id)->where('seller_id', '=', Auth::user()->id)->first();
+            dump($order);
         } else {
             abort(404);
         }
