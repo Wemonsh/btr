@@ -92,8 +92,77 @@ class OrderController extends Controller
 
     public function edit(Request $request, $gameAlias, $categoryAlias, $id) {
         if (view()->exists('orders.edit')) {
-           $order = Order::where('id', '=', $id)->where('seller_id', '=', Auth::user()->id)->first();
-            dump($order);
+           //$order = Order::where('id', '=', $id)->where('seller_id', '=', Auth::user()->id)->first();
+           //dump($order);
+
+            if ($request->isMethod('post')) {
+                $order = Order::where('id', '=', $id)->where('seller_id', '=', Auth::user()->id)->first();
+
+                // Логика добавления новых файлов в заказ
+                $files = $request->file('file');
+                $json = null;
+                if ($files != null) {
+                    $jsonDecode = json_decode($order->images);
+                    if ($jsonDecode != null) {
+                        $array = [];
+                        $counter = count($jsonDecode);
+                        foreach ($files as $file) {
+                            $array[$counter]['id'] = $counter;
+                            $array[$counter]['path'] = $file->store('/screenshots', 'public');
+                            $array[$counter]['name'] = $file->getClientOriginalName();
+                            $counter++;
+                        }
+                        foreach ($array as $file) {
+                            array_push($jsonDecode, $file);
+                        }
+                        $json = json_encode($jsonDecode);
+                    } else {
+                        $array = [];
+                        $counter = 0;
+                        foreach ($files as $file) {
+                            $array[$counter]['id'] = $counter;
+                            $array[$counter]['path'] = $file->store('/screenshots', 'public');
+                            $array[$counter]['name'] = $file->getClientOriginalName();
+                            $counter++;
+                        }
+                        $json = json_encode($array);
+                    }
+                    $order->images = $json;
+                }
+
+                $order->description = $request->input('description');
+                $order->cost = $request->input('cost');
+                $order->save();
+                return redirect(route('orderShow', [$gameAlias, $categoryAlias, $id]));
+            } else {
+
+                // Информация об игре
+                $game = Game::with('categories')->where('alias', '=', $gameAlias)->first()->toArray();
+
+                // Услуги конректной игры
+                $category = Category::with(['selects' => function($query) {
+                    $query->with('content');
+                }])->where('game_id','=', $game['id'])
+                    ->where('alias', '=', $categoryAlias)->first()->toArray();
+
+                $order = Order::with('game', 'service', 'seller', 'customer')->where('id', '=', $id)->where('seller_id', '=', Auth::user()->id)->first();
+                dump($order);
+
+                if ($order != null) {
+                    $vars = [
+                        'order' => $order,
+                        'id' => $id,
+                        'gameAlias' => $gameAlias,
+                        'serviceAlias' => $categoryAlias,
+                        'game' => $game,
+                        'category' => $category
+                    ];
+                    return view('orders.edit', $vars);
+                } else {
+                    abort(404);
+                }
+            }
+            return view('orders.edit');
         } else {
             abort(404);
         }
@@ -122,7 +191,7 @@ class OrderController extends Controller
                     'order' => Order::with('game', 'service', 'seller', 'customer')->where('id', $id)->first(),
                 ];
 
-
+                dump(Order::with('game', 'service', 'seller', 'customer')->where('id', $id)->first());
                 return view('orders.show', $vars);
             }
         } else {
