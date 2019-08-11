@@ -182,6 +182,6 @@ Route::match(['get', 'post'], '/{game}/{service}/show/{id}', ['uses' => 'Game\Or
 
 Route::match(['get', 'post'], '/{game}/{category}/buy/{id}', ['uses' => 'Game\OrderController@buy', 'as' => 'orderBuy']);
 
-
+Route::match(['get', 'post'], '/{game}/{service}/edit/{id}', ['uses' => 'Game\OrderController@edit', 'as' => 'orderEdit']);
 
 
