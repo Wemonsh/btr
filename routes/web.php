@@ -34,6 +34,14 @@ Route::get('/home', 'MainController@index');
 
 Route::get('/wowrueng', 'HomeController@gamew')->name('wowru');
 
+Route::group(['prefix' => 'main'], function() {
+    Route::match(['get'], '/about', ['uses' => 'Main\AboutController@index', 'as' => 'about']);
+    Route::match(['get'], '/faq', ['uses' => 'Main\FaqController@index', 'as' => 'faq']);
+    Route::match(['get'], '/rank', ['uses' => 'Main\RankController@index', 'as' => 'rank']);
+    Route::match(['get'], '/reviews', ['uses' => 'Main\ReviewsController@index', 'as' => 'reviews']);
+    Route::match(['get'], '/rules', ['uses' => 'Main\RulesController@index', 'as' => 'rules']);
+});
+
 Route::group(['prefix' => 'profile'], function() {
     Route::match(['get', 'post'], '/', ['uses' => 'User\ProfileController@index', 'as' => 'profile']);
     Route::match(['get', 'post'], '/chat/{id?}', ['uses' => 'User\ChatController@index', 'as' => 'chat']);

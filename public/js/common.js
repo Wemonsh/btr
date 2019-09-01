@@ -6,6 +6,7 @@
 				search = function (el) {
 					if (!timeoutReference) return;
 					timeoutReference = null;
+					callback.call(el);
 				};
 			return this.each(function (i, el) {
 				var $el = $(el);
@@ -23,6 +24,7 @@
 						var valor = el.value.toLowerCase();
 						var gameNameTrim = valor.replace(/\s+/g, '');
 						var gameNameTrim2 = gameNameTrim.replace(/[^\w\s]/gi, '');
+						console.log(gameNameTrim2);
 						if (gameNameTrim2) {
 							$(".containerItems").children().fadeOut();
 							$(".containerItems [data-search*=" + gameNameTrim2 + "]").fadeIn('fast');
@@ -33,6 +35,7 @@
 							});
 						}
 						search(el);
+						console.log(el);
 					}, timeout);
 				}).on('blur', function () {
 					//when leaving the input
@@ -48,8 +51,6 @@
 	});
 })(jQuery);
 
-$('.search-input').search();
-
 $(function () {
 	$('.menu-btn').on('click', function (e) {
 		e.preventDefault();
@@ -64,3 +65,13 @@ $('.slider').slick({
 	slidesToShow: 3,
 	centerMode: true,
 });
+
+$('.slider-games').slick({
+		dots: false,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 1,
+		variableWidth: true
+});
+
+
